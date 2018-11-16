@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar_top"
+        layout="@layout/layout_toolbar" />
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        android:layout_below="@id/toolbar_top"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_web_progressbar_height" />
+
+
+    <TextView
+        android:id="@+id/text_btn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:background="@color/message_button"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:text="确定" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_btn"
+        android:layout_marginStart="8dp"
+        android:text="我已阅读并同意《中鸽网使用协议》"
+        android:textColor="@color/gray" />
+
+
+    <com.cpigeon.app.view.MyWebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/checkbox"
+        android:layout_below="@+id/toolbar_top"
+        android:layout_margin="8dp" />
+
+
+</RelativeLayout>

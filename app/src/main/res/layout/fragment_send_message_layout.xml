@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:textSize="@dimen/medium_text_size"
+            android:text="收件人"
+            android:layout_marginStart="@dimen/large_horizontal_margin_15"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        </TextView>
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ic_contacts_add"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/large_horizontal_margin_15"
+            app:srcCompat="@mipmap/ic_contacts_add"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+
+        <EditText
+            android:id="@+id/phone_numbers"
+            android:textSize="@dimen/medium_text_size"
+            tools:text="13213213131312132121332131233133213123132131313"
+            android:paddingLeft="16dp"
+            android:paddingEnd="16dp"
+            android:layout_toRightOf="@id/text1"
+            android:layout_toLeftOf="@+id/clean"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:inputType="number"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        </EditText>
+
+
+
+        <ImageView
+            android:id="@+id/clean"
+            android:layout_toLeftOf="@id/ic_contacts_add"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/close"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+
+    </RelativeLayout>
+
+
+
+    <include
+        android:id="@+id/lin1"
+        android:layout_below="@+id/rl1"
+        layout="@layout/item_line_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/view1"
+        android:layout_below="@+id/lin1"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <TextView
+            android:id="@+id/number"
+            android:textSize="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorGreen"
+            tools:text="@string/string_text_select_contacts_number"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_round_white_5"
+        android:layout_below="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/message_content"
+            android:gravity="left"
+            android:maxLines="6"
+            android:minLines="6"
+            android:maxLength="200"
+            android:hint="请输入短信"
+            android:textSize="@dimen/medium_text_size"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="32dp"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ic_right"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/svg_ic_triangle_right"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+
+        <TextView
+            android:id="@+id/content_count"
+            android:layout_below="@+id/message_content"
+            tools:text="23/200"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray_m"
+            android:layout_marginRight="16dp"
+            android:textSize="@dimen/small_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/btn_left"
+        android:textSize="16dp"
+        android:text="保存内容"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/rl2"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_primary_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/btn_right"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:textSize="16dp"
+        android:text="点击发送"
+        android:layout_below="@+id/rl2"
+        android:paddingLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_red_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/balance"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/btn_right"
+        android:textColor="@color/black"
+        tools:text="12314511235123"
+        android:gravity="center"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_left"
+        android:layout_below="@+id/balance"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/small_text_size"
+        tools:text="@string/string_sign_info" />
+
+    <TextView
+        android:id="@+id/btn_modify_sign"
+        android:text="修改签名"
+        android:layout_below="@+id/balance"
+        android:textColor="@color/colorGreen"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/small_text_size"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+</RelativeLayout>

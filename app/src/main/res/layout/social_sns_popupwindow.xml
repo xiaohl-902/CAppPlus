@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="45dp"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_marginLeft="@dimen/large_vertical_margin"
+	android:layout_marginRight="@dimen/large_vertical_margin"
+	android:id="@+id/social_sns"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:gravity="center_vertical"
+	android:orientation="vertical">
+
+
+	<RelativeLayout
+		android:paddingBottom="5dp"
+		android:gravity="center_vertical"
+		android:layout_centerVertical="true"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent">
+
+		<!--<ImageView-->
+			<!--android:id="@+id/follow"-->
+			<!--android:layout_centerVertical="true"-->
+			<!--android:layout_width="50dp"-->
+			<!--android:layout_height="25dp"-->
+			<!--android:layout_marginEnd="20dp"-->
+			<!--android:src="@mipmap/ic_home_follow" />-->
+
+		<LinearLayout
+			android:layout_centerVertical="true"
+			android:visibility="visible"
+			android:id="@+id/ll_loaction"
+			android:layout_toLeftOf="@+id/ll_thumb"
+			android:orientation="horizontal"
+			android:layout_marginRight="10dp"
+			android:layout_width="match_parent"
+			android:gravity="left"
+			android:layout_height="wrap_content">
+			<android.support.v7.widget.AppCompatImageView
+				app:srcCompat="@mipmap/ic_circle_message_new_location"
+				android:layout_gravity="center_vertical"
+				android:layout_marginRight="5dp"
+				android:layout_width="10dp"
+				android:layout_height="24dp" />
+
+			<TextView
+				android:text="全部动12312313131231111111111111111111111态"
+				android:gravity="center_vertical"
+				android:textSize="14sp"
+				android:layout_gravity="center"
+				android:singleLine="true"
+				android:textColor="@color/color_666666"
+				android:id="@+id/tv_message_location"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" />
+		</LinearLayout>
+
+
+
+		<android.support.v7.widget.AppCompatImageView
+			android:id="@+id/share"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			app:srcCompat="@mipmap/ic_circle_share"
+			android:layout_width="20dp"
+			android:layout_height="20dp" />
+
+		<LinearLayout
+			android:id="@+id/ll_comment"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="32dp"
+			android:layout_toLeftOf="@id/share"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent">
+
+			<android.support.v7.widget.AppCompatImageView
+				android:id="@+id/comment"
+				android:src="@mipmap/ic_circle_comment"
+				android:layout_centerVertical="true"
+				android:layout_width="20dp"
+				android:layout_height="match_parent" />
+
+
+			<TextView
+				android:id="@+id/commentNumber"
+				tools:text="123"
+				android:gravity="center_vertical"
+				android:layout_marginLeft="8dp"
+				android:textSize="@dimen/text_size_14"
+				android:textColor="@color/color_666666"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent" />
+
+		</LinearLayout>
+
+
+
+		<LinearLayout
+			android:id="@+id/ll_thumb"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="32dp"
+			android:layout_toLeftOf="@id/ll_comment"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent">
+
+			<android.support.v7.widget.AppCompatImageView
+				android:id="@+id/thumb"
+				android:layout_centerVertical="true"
+				tools:src="@mipmap/ic_thumbs_not_up_new"
+				android:layout_width="20dp"
+				android:layout_height="match_parent" />
+
+			<TextView
+				android:id="@+id/thumbNumber"
+				tools:text="123"
+				android:layout_marginLeft="8dp"
+				android:textSize="@dimen/text_size_14"
+				android:gravity="center"
+				android:textColor="@color/color_666666"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent" />
+
+		</LinearLayout>
+
+
+	</RelativeLayout>
+	<View
+		android:id="@+id/view_line"
+		android:visibility="visible"
+		android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_alignParentBottom="true"
+		android:background="@color/color_circle_line"
+		/>
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:layout_margin="@dimen/large_horizontal_margin_15"
+        app:cardCornerRadius="@dimen/dp_4"
+        app:cardElevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/rank"
+                android:visibility="visible"
+                app:line_text_title="训赛名次"
+                app:line_right_text_color = "@color/light_red"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.cpigeon.app.view.LineTextView
+                app:line_text_title="训赛空距"
+                android:id="@+id/displacement"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/speed"
+                app:line_text_title="当前分速"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/pigeon_number"
+                app:line_text_title="训赛羽数"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/first_speed"
+                android:visibility="gone"
+                app:line_text_title="历次第一名"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/time"
+                app:line_text_title="训赛时间"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/entity_name"
+                app:line_text_title="项目名称"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/order"
+        tools:text="1"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_ovel_solid_gray"
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent"
+        android:background="@color/color_line"/>
+
+
+
+</RelativeLayout>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginBottom="@dimen/large_vertical_margin"
+
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/input_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/circle_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_circle_message_layout"/>
+
+            <TextView
+                android:id="@+id/text_all_comment"
+                android:textSize="@dimen/big_text_size"
+                android:textColor="@color/black"
+                android:text="全部评论"
+                android:visibility="visible"
+                android:padding="@dimen/medium_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:padding="@dimen/medium_vertical_margin"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/input_comment"
+        android:layout_height="56dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        layout="@layout/item_new_comment_layout"/>
+</RelativeLayout>

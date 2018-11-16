@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/frame"
+        android:layout_width="400dp"
+        android:layout_height="260dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_blue" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/take"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="24dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_shutter_button"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_hint"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:layout_above="@id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        tools:text="请拍摄身份证正面"/>
+
+
+</RelativeLayout>

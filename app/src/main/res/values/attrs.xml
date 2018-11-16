@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SearchEditText">
+        <attr name="drawableDel" format="reference" />
+        <attr name="search_gravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="stl_SmartTabLayout">
+        <attr name="stl_indicatorAlwaysInCenter" format="boolean" />
+        <attr name="stl_indicatorWithoutPadding" format="boolean" />
+        <attr name="stl_indicatorInFront" format="boolean" />
+        <attr name="stl_indicatorInterpolation" format="enum">
+            <enum name="smart" value="0" />
+            <enum name="linear" value="1" />
+        </attr>
+        <attr name="stl_indicatorGravity" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+            <enum name="center" value="2" />
+        </attr>
+        <attr name="stl_indicatorColor" format="color" />
+        <attr name="stl_indicatorColors" format="reference" />
+        <attr name="stl_indicatorThickness" format="dimension" />
+        <attr name="stl_indicatorWidth" format="dimension">
+            <enum name="auto" value="-1" />
+        </attr>
+        <attr name="stl_indicatorCornerRadius" format="dimension" />
+        <attr name="stl_overlineColor" format="color" />
+        <attr name="stl_overlineThickness" format="dimension" />
+        <attr name="stl_underlineColor" format="color" />
+        <attr name="stl_underlineThickness" format="dimension" />
+        <attr name="stl_dividerColor" format="color" />
+        <attr name="stl_dividerColors" format="reference" />
+        <attr name="stl_dividerThickness" format="dimension" />
+        <attr name="stl_defaultTabBackground" format="reference" />
+        <attr name="stl_defaultTabTextAllCaps" format="boolean" />
+        <attr name="stl_defaultTabTextColor" format="color|reference" />
+        <attr name="stl_defaultTabTextSize" format="dimension" />
+        <attr name="stl_defaultTabTextHorizontalPadding" format="dimension" />
+        <attr name="stl_defaultTabTextMinWidth" format="dimension" />
+        <attr name="stl_customTabTextLayoutId" format="reference" />
+        <attr name="stl_customTabTextViewId" format="reference" />
+        <attr name="stl_distributeEvenly" format="boolean" />
+        <attr name="stl_clickable" format="boolean" />
+        <attr name="stl_titleOffset" format="dimension">
+            <enum name="auto_center" value="-1" />
+        </attr>
+        <attr name="stl_drawDecorationAfterTab" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialCalendarView">
+
+        <attr name="mcv_dateTextAppearance" format="reference" />
+        <attr name="mcv_weekDayTextAppearance" format="reference" />
+        <attr name="mcv_headerTextAppearance" format="reference" />
+
+        <attr name="mcv_arrowColor" format="color" />
+        <attr name="mcv_leftArrowMask" format="reference" />
+        <attr name="mcv_rightArrowMask" format="reference" />
+        <attr name="mcv_selectionColor" format="color" />
+
+        <attr name="mcv_showOtherDates" format="integer">
+            <flag name="none" value="0" />
+            <flag name="other_months" value="1" />
+            <flag name="out_of_range" value="2" />
+            <flag name="decorated_disabled" value="4" />
+            <flag name="defaults" value="4" />
+            <flag name="all" value="7" />
+        </attr>
+
+        <attr name="mcv_allowClickDaysOutsideCurrentMonth" format="boolean" />
+
+        <attr name="mcv_weekDayLabels" format="reference" />
+        <attr name="mcv_monthLabels" format="reference" />
+
+        <!-- We want to accept match_parent but not wrap_content. It'd be better if we could
+        point to the real match_parent constant, but since it hasn't change since API 1,
+        I think it's safe to hardcode it-->
+        <attr name="mcv_tileSize" format="dimension" >
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <attr name="mcv_tileHeight" format="dimension" >
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <attr name="mcv_tileWidth" format="dimension" >
+            <enum name="match_parent" value="-1" />
+        </attr>
+
+        <attr name="mcv_firstDayOfWeek" format="enum">
+            <enum name="sunday" value="1" />
+            <enum name="monday" value="2" />
+            <enum name="tuesday" value="3" />
+            <enum name="wednesday" value="4" />
+            <enum name="thursday" value="5" />
+            <enum name="friday" value="6" />
+            <enum name="saturday" value="7" />
+        </attr>
+
+        <attr name="mcv_calendarMode" format="enum">
+            <enum name="month" value="0" />
+            <enum name="week" value="1" />
+        </attr>
+
+        <attr name="mcv_titleAnimationOrientation" format="enum">
+            <enum name="vertical" value="0" />
+            <enum name="horizontal" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandTextView">
+        <attr name="showLines" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="PraiseListView">
+        <attr name="item_color" format="color"/>
+        <attr name="item_selector_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="LineTextView">
+        <attr name="line_text_title" format="string"/>
+        <attr name="isLargeText" format="boolean"/>
+        <attr name="line_text_imageRight" format="reference"/>
+        <attr name="line_text_color" format="color"/>
+        <attr name="line_left_text_color" format="color"/>
+        <attr name="line_right_text_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="InputTextView">
+        <attr name="title" format="string"/>
+        <attr name="editPadding" format="dimension"/>
+        <attr name="isSingle" format="boolean"/>
+        <attr name="imageRight" format="reference"/>
+        <attr name="input_text_InputType"/>
+    </declare-styleable>
+
+    <attr name="input_text_InputType">
+        <!-- There is no content type.  The text is not editable. -->
+        <flag name="none" value="0x00000000" />
+        <!-- Just plain old text.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_NORMAL}. -->
+        <flag name="text" value="0x00000001" />
+        <!-- Can be combined with <var>text</var> and its variations to
+             request capitalization of all characters.  Corresponds to
+             {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_CHARACTERS}. -->
+        <flag name="textCapCharacters" value="0x00001001" />
+        <!-- Can be combined with <var>text</var> and its variations to
+             request capitalization of the first character of every word.  Corresponds to
+             {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_WORDS}. -->
+        <flag name="textCapWords" value="0x00002001" />
+        <!-- Can be combined with <var>text</var> and its variations to
+             request capitalization of the first character of every sentence.  Corresponds to
+             {@link android.text.InputType#TYPE_TEXT_FLAG_CAP_SENTENCES}. -->
+        <flag name="textCapSentences" value="0x00004001" />
+        <!-- Can be combined with <var>text</var> and its variations to
+             request auto-correction of text being input.  Corresponds to
+             {@link android.text.InputType#TYPE_TEXT_FLAG_AUTO_CORRECT}. -->
+        <flag name="textAutoCorrect" value="0x00008001" />
+        <!-- Can be combined with <var>text</var> and its variations to
+             specify that this field will be doing its own auto-completion and
+             talking with the input method appropriately.  Corresponds to
+             {@link android.text.InputType#TYPE_TEXT_FLAG_AUTO_COMPLETE}. -->
+        <flag name="textAutoComplete" value="0x00010001" />
+        <!-- Can be combined with <var>text</var> and its variations to
+             allow multiple lines of text in the field.  If this flag is not set,
+             the text field will be constrained to a single line.  Corresponds to
+             {@link android.text.InputType#TYPE_TEXT_FLAG_MULTI_LINE}. -->
+        <flag name="textMultiLine" value="0x00020001" />
+        <!-- Can be combined with <var>text</var> and its variations to
+             indicate that though the regular text view should not be multiple
+             lines, the IME should provide multiple lines if it can.  Corresponds to
+             {@link android.text.InputType#TYPE_TEXT_FLAG_IME_MULTI_LINE}. -->
+        <flag name="textImeMultiLine" value="0x00040001" />
+        <!-- Can be combined with <var>text</var> and its variations to
+             indicate that the IME should not show any
+             dictionary-based word suggestions.  Corresponds to
+             {@link android.text.InputType#TYPE_TEXT_FLAG_NO_SUGGESTIONS}. -->
+        <flag name="textNoSuggestions" value="0x00080001" />
+        <!-- Text that will be used as a URI.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_URI}. -->
+        <flag name="textUri" value="0x00000011" />
+        <!-- Text that will be used as an e-mail address.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_EMAIL_ADDRESS}. -->
+        <flag name="textEmailAddress" value="0x00000021" />
+        <!-- Text that is being supplied as the subject of an e-mail.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_EMAIL_SUBJECT}. -->
+        <flag name="textEmailSubject" value="0x00000031" />
+        <!-- Text that is the content of a short message.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_SHORT_MESSAGE}. -->
+        <flag name="textShortMessage" value="0x00000041" />
+        <!-- Text that is the content of a long message.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_LONG_MESSAGE}. -->
+        <flag name="textLongMessage" value="0x00000051" />
+        <!-- Text that is the name of a person.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_PERSON_NAME}. -->
+        <flag name="textPersonName" value="0x00000061" />
+        <!-- Text that is being supplied as a postal mailing address.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_POSTAL_ADDRESS}. -->
+        <flag name="textPostalAddress" value="0x00000071" />
+        <!-- Text that is a password.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_PASSWORD}. -->
+        <flag name="textPassword" value="0x00000081" />
+        <!-- Text that is a password that should be visible.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_VISIBLE_PASSWORD}. -->
+        <flag name="textVisiblePassword" value="0x00000091" />
+        <!-- Text that is being supplied as text in a web form.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_WEB_EDIT_TEXT}. -->
+        <flag name="textWebEditText" value="0x000000a1" />
+        <!-- Text that is filtering some other data.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_FILTER}. -->
+        <flag name="textFilter" value="0x000000b1" />
+        <!-- Text that is for phonetic pronunciation, such as a phonetic name
+             field in a contact entry.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_PHONETIC}. -->
+        <flag name="textPhonetic" value="0x000000c1" />
+        <!-- Text that will be used as an e-mail address on a web form.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_WEB_EMAIL_ADDRESS}. -->
+        <flag name="textWebEmailAddress" value="0x000000d1" />
+        <!-- Text that will be used as a password on a web form.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_TEXT} |
+             {@link android.text.InputType#TYPE_TEXT_VARIATION_WEB_PASSWORD}. -->
+        <flag name="textWebPassword" value="0x000000e1" />
+        <!-- A numeric only field.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+             {@link android.text.InputType#TYPE_NUMBER_VARIATION_NORMAL}. -->
+        <flag name="number" value="0x00000002" />
+        <!-- Can be combined with <var>number</var> and its other options to
+             allow a signed number.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+             {@link android.text.InputType#TYPE_NUMBER_FLAG_SIGNED}. -->
+        <flag name="numberSigned" value="0x00001002" />
+        <!-- Can be combined with <var>number</var> and its other options to
+             allow a decimal (fractional) number.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+             {@link android.text.InputType#TYPE_NUMBER_FLAG_DECIMAL}. -->
+        <flag name="numberDecimal" value="0x00002002" />
+        <!-- A numeric password field.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_NUMBER} |
+             {@link android.text.InputType#TYPE_NUMBER_VARIATION_PASSWORD}. -->
+        <flag name="numberPassword" value="0x00000012" />
+        <!-- For entering a phone number.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_PHONE}. -->
+        <flag name="phone" value="0x00000003" />
+        <!-- For entering a date and time.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+             {@link android.text.InputType#TYPE_DATETIME_VARIATION_NORMAL}. -->
+        <flag name="datetime" value="0x00000004" />
+        <!-- For entering a date.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+             {@link android.text.InputType#TYPE_DATETIME_VARIATION_DATE}. -->
+        <flag name="date" value="0x00000014" />
+        <!-- For entering a time.  Corresponds to
+             {@link android.text.InputType#TYPE_CLASS_DATETIME} |
+             {@link android.text.InputType#TYPE_DATETIME_VARIATION_TIME}. -->
+        <flag name="time" value="0x00000024" />
+    </attr>
+
+
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginTop="1dp"
+    app:cardCornerRadius="@dimen/dp_4"
+    app:cardElevation="0dp"
+    app:contentPadding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp_4">
+
+        <TextView
+            android:id="@+id/tv_item_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="8dp"
+            android:text="无监控"
+            android:textColor="#ff3a3a" />
+
+        <TextView
+            android:id="@+id/tv_item_racename"
+            style="@style/Marquee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_item_state"
+            android:paddingLeft="4dp"
+            android:text="登录312545"
+            android:textColor="#737373"
+            android:textSize="@dimen/sp_16" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

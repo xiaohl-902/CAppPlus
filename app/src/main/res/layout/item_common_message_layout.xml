@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/checkbox"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        tools:srcCompat="@drawable/ic_choosed"
+        android:visibility="visible"
+        android:layout_width="24dp"
+        android:layout_height="24dp"/>
+
+
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        app:ios="false"
+        android:layout_toLeftOf="@+id/checkbox"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            tools:text="123123333333"
+            android:textSize="@dimen/medium_text_size"/>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/light_red"
+            android:textSize="@dimen/medium_text_size"
+            android:text="编辑"
+            android:textColor="@android:color/white"/>
+
+
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+
+
+
+</RelativeLayout>

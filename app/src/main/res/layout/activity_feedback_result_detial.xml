@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="反馈内容"
+                android:textColor="#8b8b8b"
+                android:textSize="@dimen/sp_16" />
+
+
+            <cn.carbs.android.expandabletextview.library.ExpandableTextView
+                android:id="@+id/etv_feedback_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.5"
+                android:paddingBottom="20dp"
+                android:paddingTop="4dp"
+                android:text="@string/cpigeon_intro"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_18"
+                app:etv_MaxLinesOnShrink="2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#cdcdcd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="回复内容"
+                android:textColor="#8b8b8b"
+                android:textSize="@dimen/sp_16" />
+
+            <cn.carbs.android.expandabletextview.library.ExpandableTextView
+                android:id="@+id/etv_feedback_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.5"
+                android:paddingBottom="20dp"
+                android:paddingTop="4dp"
+                android:text="@string/cpigeon_intro"
+                android:textColor="#444444"
+                android:textSize="@dimen/sp_18"
+                app:etv_InitState="expand"
+                app:etv_MaxLinesOnShrink="4" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

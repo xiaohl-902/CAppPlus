@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white">
+
+            <com.cpigeon.app.utils.customview.MarqueeTextView
+                android:id="@+id/toolbar_title"
+                style="@style/Marquee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                tools:text="中鸽网" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_upload_logo"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        android:layout_marginLeft="@dimen/spacing_left_reight"
+        android:layout_marginRight="@dimen/spacing_left_reight"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_bg_corner_3_solid_white"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_upload_logo"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/ic_photo_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="请点击此处上传您的LOGO"
+                android:textColor="#4D4D4D"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="("
+                    android:textColor="#4D4D4D"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2M之内的png格式图片"
+                    android:textColor="#F12F2F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=")"
+                    android:textColor="#4D4D4D"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="@dimen/spacing_left_reight"
+        android:layout_marginRight="@dimen/spacing_left_reight"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_bg_corner_3_solid_white"
+        android:gravity="center_vertical"
+        android:paddingLeft="9dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="赛事组织"
+            android:textColor="@color/color_text_cancel"
+            android:textSize="@dimen/small_text_size_2" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical">
+
+
+            <!--司放地-->
+            <com.cpigeon.app.view.AlwaysMarqueeTextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusableInTouchMode="true"
+                android:gravity="right|center"
+                android:hint="请输入"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/medium_text_size" />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img_right_lay_eggs"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="16dp"
+            android:src="@mipmap/ic_arrow_right" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_left_reight"
+        android:layout_marginRight="@dimen/spacing_left_reight"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:paddingLeft="9dp"
+        android:text="@string/str_shoot_org_hint"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/small_text_size" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:id="@+id/btn_shoot_video"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="48dp"
+        android:src="@mipmap/ic_photo2" />
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_solid_white_radius_10"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:layout_margin="20dp"
+    android:weightSum="4">
+
+
+    <TextView
+        android:id="@+id/ll_1"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/color_text_color_ec5b43"
+        android:textSize="14sp" />
+
+    <View
+        android:background="@color/color_circle_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+    <TextView
+        android:id="@+id/ll_2"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="所有人可见"
+        android:textColor="@color/color_text_color_ec5b43"
+        android:textSize="14sp" />
+
+    <View
+        android:background="@color/color_circle_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+    <TextView
+        android:id="@+id/ll_3"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="好友可见"
+        android:textSize="14sp"
+        android:textColor="@color/color_text_color_ec5b43"/>
+
+    <View
+        android:background="@color/color_circle_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+    <TextView
+        android:id="@+id/ll_4"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="自己可见"
+        android:textSize="14sp"
+        android:textColor="@color/color_text_color_ec5b43" />
+
+    <View
+        android:background="@color/color_circle_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:id="@+id/ll_5"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="取消"
+        android:textSize="14sp"
+        android:textColor="@color/color_text_color_ec5b43" />
+
+
+</LinearLayout>

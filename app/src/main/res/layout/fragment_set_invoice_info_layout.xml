@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ScrollView
+        android:layout_above="@+id/ll2"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.cpigeon.app.view.LineInputView
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="@color/white"
+                    android:id="@+id/lineUnitsName"
+                    app:title = "发票抬头"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <include layout="@layout/view_dividerline_h1"/>
+
+                <com.cpigeon.app.view.LineInputView
+                    android:background="@color/white"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:id="@+id/lineTFN"
+                    app:title = "企业税号"
+                    app:input_text_InputType = "number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <include layout="@layout/view_dividerline_h1"/>
+
+                <LinearLayout
+                    android:background="@color/white"
+
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <TextView
+                        android:textSize="@dimen/medium_text_size"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:text = "发票类型"
+                        android:layout_centerVertical="true"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <Spinner
+                        android:id="@+id/spinnerVoiceType"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:dropDownVerticalOffset="50dp"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/view_dividerline_h1"/>
+
+                <LinearLayout
+                    android:id="@+id/llPaperInvoice"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.cpigeon.app.view.LineInputView
+                        android:background="@color/white"
+
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:id="@+id/lineReceiverName"
+                        app:title = "收件人"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <include layout="@layout/view_dividerline_h1"/>
+                    <com.cpigeon.app.view.LineInputView
+                        android:background="@color/white"
+
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:id="@+id/lineReceiverPhone"
+                        app:title = "收件人电话"
+                        app:input_text_InputType = "phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <include layout="@layout/view_dividerline_h1"/>
+
+                    <com.cpigeon.app.view.LineInputView
+                        android:background="@color/white"
+                        app:isSingle = "false"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:id="@+id/lineReceiverArea"
+                        app:title = "所在区域"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <include layout="@layout/view_dividerline_h1"/>
+
+                    <com.cpigeon.app.view.LineInputView
+                        android:background="@color/white"
+                        app:isSingle = "false"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:id="@+id/lineDetailsAddress"
+                        app:title = "详细地址"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llElectronicInvoice"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.cpigeon.app.view.LineInputView
+                        android:background="@color/white"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:id="@+id/lineEmail"
+                        app:title = "电子邮箱"
+                        app:input_text_InputType = "textEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll2"
+                    android:padding="15dp"
+                    android:text="@string/message_set_invoice_hint" />
+            </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSure"
+            android:layout_weight="1"
+            android:text="确定"
+            android:layout_margin="15dp"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:layout_width="0dp"
+            android:layout_height="45dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

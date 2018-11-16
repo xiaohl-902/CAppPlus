@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:paddingLeft="@dimen/large_horizontal_margin_15"
+                android:paddingRight="@dimen/large_horizontal_margin_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/head_img"
+                    android:layout_marginTop="16dp"
+                    app:roundedCornerRadius="2.5dp"
+                    fresco:placeholderImage="@mipmap/head_image_default_2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_expand"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_marginTop="16dp"
+                                android:id="@+id/user_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/time"
+                                android:layout_width="wrap_content"
+                                tools:text = "1231412333333"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/gray_m"
+                                android:textSize="13sp" />
+                            <TextView
+                                android:id="@+id/from"
+                                android:layout_toRightOf="@+id/time"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                tools:text = "1231412333333"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/gray_m"
+                                android:textSize="13sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/img_expand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/vector_expand_arrow_down" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <com.cpigeon.app.view.ExpandTextView
+                app:showLines="4"
+                android:layout_marginLeft="@dimen/large_horizontal_margin"
+                android:layout_marginRight="@dimen/large_horizontal_margin"
+                android:id="@+id/content_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text=""
+                android:textColor="#080808"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/imgsList"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/large_horizontal_margin_15"
+                android:paddingRight="@dimen/large_horizontal_margin_15"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <cn.jzvd.JZVideoPlayerStandard
+                android:visibility="gone"
+                android:paddingLeft="@dimen/large_horizontal_margin_15"
+                android:paddingRight="@dimen/large_horizontal_margin_15"
+                android:id="@+id/videoplayer"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <include layout="@layout/social_sns_popupwindow"/>
+            <LinearLayout
+                android:id="@+id/digCommentBody"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.cpigeon.app.view.PraiseListView
+                    android:paddingTop="@dimen/medium_vertical_margin"
+                    android:paddingBottom="@dimen/medium_vertical_margin"
+                    android:layout_marginLeft="@dimen/large_horizontal_margin_15"
+                    android:layout_marginRight="@dimen/large_horizontal_margin_15"
+                    android:id="@+id/thumbs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/praise_item"
+                    app:item_color="@color/praise_item" />
+                <android.support.v7.widget.RecyclerView
+                    android:paddingTop="@dimen/medium_vertical_margin"
+                    android:paddingBottom="@dimen/medium_vertical_margin"
+                    android:layout_marginLeft="@dimen/large_horizontal_margin_15"
+                    android:layout_marginRight="@dimen/large_horizontal_margin_15"
+                    android:id="@+id/comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                android:gravity="center"
+                android:text="点击这里可以跳转到详情界面"
+                android:id="@+id/tv_details"
+                android:padding="@dimen/medium_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+

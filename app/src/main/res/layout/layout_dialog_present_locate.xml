@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:paddingTop="10dp"
+        android:text="当前位置坐标"
+        android:textColor="@color/color_262626"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tv_present_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="经度：000.000000"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/tv_present_la"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+        android:text="纬度：000.000000"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/dialog_determine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="确定"
+        android:textColor="@color/color_262626"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="240dp"
+    android:background="@drawable/shape_white_half_layout"
+    android:layout_height="wrap_content">
+
+    <com.cpigeon.app.view.LineTextView
+        android:id="@+id/line_text_1"
+        app:line_text_color="@color/white"
+        app:line_text_title="项目名称"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.cpigeon.app.view.LineTextView
+        android:id="@+id/line_text_2"
+        app:line_text_color="@color/white"
+        app:line_text_title="当前赛鸽名次"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.cpigeon.app.view.LineTextView
+        android:id="@+id/line_text_3"
+        app:line_text_color="@color/white"
+        app:line_text_title="当前赛鸽分数"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.cpigeon.app.view.LineTextView
+        android:id="@+id/line_text_4"
+        app:line_text_color="@color/white"
+        app:line_text_title="第一名分速"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

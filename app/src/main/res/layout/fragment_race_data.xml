@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cpigeon.app.utils.customview.SearchEditText
+        android:id="@+id/searchEditText"
+        style="@style/searchedittextstyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_edittext_height"
+        android:hint="姓名/足环号码" />
+
+    <LinearLayout
+        android:id="@+id/layout_list_table_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/list_header_race_detial_layout_tableheader_minheight"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/ll_sort"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:clickable="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/list_header_race_detial_table_header_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/ranking_temp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/list_header_race_detial_textview_tableheader_textsize" />
+
+            <CheckBox
+                android:id="@+id/img_ic_instructions"
+                android:layout_width="12dp"
+                android:layout_height="7dp"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/checkbox_arrow_top_btn"
+                android:button="@null"
+                android:clickable="false"
+                android:enabled="false"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/list_header_race_detial_table_header_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/list_header_race_detial_textview_tableheader_textsize" />
+
+        <TextView
+            android:id="@+id/list_header_race_detial_table_header_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/foot_number"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/list_header_race_detial_textview_tableheader_textsize" />
+
+        <ImageView
+            android:id="@+id/img_hint"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:src="@drawable/ic_instructions"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <include layout="@layout/fragment_matchlive_sub" />
+</LinearLayout>

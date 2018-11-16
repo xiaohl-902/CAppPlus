@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bg_color_fafafa"
+    android:layout_height="56dp">
+
+    <View
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:background="@color/color_e6e6e6"/>
+
+    <TextView
+        android:id="@+id/input"
+        android:layout_marginLeft="@dimen/large_horizontal_margin_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_radius_100_solid_default_color"
+        android:drawableLeft="@mipmap/ic_news_common_input"
+        android:drawablePadding="@dimen/small_horizontal_margin"
+        android:paddingBottom="@dimen/small_vertical_margin"
+        android:paddingLeft="@dimen/big_large_horizontal_margin"
+        android:paddingRight="@dimen/big_large_horizontal_margin"
+        android:textColor="@color/text_color_gray"
+        android:paddingTop="8dp"
+        android:visibility="visible"
+        android:text="写写你的看法"
+        android:textSize="@dimen/medium_text_size" />
+
+    <TextView
+        android:id="@+id/input_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_radius_100_solid_default_color"
+        android:drawableLeft="@mipmap/ic_news_common_input"
+        android:drawablePadding="@dimen/small_horizontal_margin"
+        android:paddingBottom="@dimen/small_vertical_margin"
+        android:paddingLeft="@dimen/big_large_horizontal_margin"
+        android:paddingRight="@dimen/big_large_horizontal_margin"
+        android:paddingTop="8dp"
+        android:text="写写你的看法"
+        android:textColor="@color/text_color_gray"
+        android:visibility="gone"
+        android:textSize="@dimen/medium_text_size" />
+
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_marginRight="@dimen/large_horizontal_margin_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@mipmap/ic_circle_comment"
+        android:drawablePadding="@dimen/small_horizontal_margin"
+        android:textColor="@color/text_color_4d4d4d"
+        android:textSize="14dp"
+        tools:text="20" />
+
+    <LinearLayout
+        android:id="@+id/ll_thumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/comment"
+        android:layout_marginRight="32dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/image_thumb"
+            android:layout_marginRight="6dp"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:src="@mipmap/ic_thumbs_up_new"/>
+
+
+        <TextView
+            android:id="@+id/thumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_4d4d4d"
+            android:textSize="14dp"
+            tools:text="20" />
+
+    </LinearLayout>
+</RelativeLayout>

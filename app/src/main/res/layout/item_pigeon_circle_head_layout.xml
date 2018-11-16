@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlUserHeadMessage"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:paddingBottom="27dp"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/bg_cricle_home_head">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head_img"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/head_image_default" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llFollow"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_head"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@+id/view_line">
+
+        <TextView
+            android:layout_marginTop="0.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+
+        <TextView
+            android:id="@+id/tv_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            tools:text="1213" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="13dp"
+        android:layout_below="@+id/rl_head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:background="@color/color_circle_head_line" />
+
+
+    <LinearLayout
+        android:id="@+id/llFans"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_head"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/view_line">
+
+        <TextView
+            android:layout_marginTop="0.5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="粉丝"
+            android:textColor="@color/white"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            tools:text="421321" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

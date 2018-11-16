@@ -1,0 +1,166 @@
+<resources>
+    <string name="cpigeon_intro">    中鸽网（亦称中国信鸽网或中鸽信鸽网）是专业的信鸽行业门户网站，创办于2005年6月。是目前信鸽（赛鸽）领域唯一的公益性信鸽专业门户平台，旨在为全球信鸽爱好者提供免费的信鸽资讯服务，同时为信鸽协会、赛鸽俱乐部、赛鸽公棚等信鸽企业提供形象展示、信息发布、比赛统计、比赛视频分享、信鸽交流、比赛直播等相关网络支持及服务。</string>
+    <string name="app_name">中鸽网</string>
+    <string name="regist_new_user">新用户注册</string>
+    <string name="reset_password">重置密码</string>
+    <string name="sentence_not_watch_pay_agreement_prompt">请仔细阅读并同意《中鸽网支付协议》</string>
+    <string name="sentence_not_watch_regist_agreement_prompt">请仔细阅读并同意《中鸽网注册协议》</string>
+    <string name="confirm">确定</string>
+    <string name="please_enter_the_correct_phone_number">请输入正确的手机号码</string>
+    <string name="prompt">提示</string>
+    <string name="user_name">用户名</string>
+    <string name="please_login">请您登陆</string>
+    <string name="spik">跳过</string>
+    <string name="search_prompt_has_key">搜索“%s”</string>
+    <string name="search_prompt_clear_key">清除搜索</string>
+    <string name="function_introduction">功能介绍</string>
+    <string name="version_information">版本信息</string>
+    <string name="version_information_gs">成都市中鸽科技有限公司</string>
+    <string name="version_information_c" translatable="false">Copyright © 2006- 2017 All rights reserved.</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="version_number">V1.0</string>
+    <string name="submit">提交</string>
+    <string name="pay_password">支付密码</string>
+    <string name="login_password">登陆密码</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="Push_Notifications">推送通知</string>
+    <string name="search_online">在线搜索</string>
+    <string name="Setting_Security">安全设置</string>
+    <string name="Setting_Application_Score">应用评分</string>
+    <string name="Check_the_new_version">检查新版本</string>
+
+    <string name="please_enter_the_phone_received_SMS_verification_code">请输入%1$s收到的短信验证码</string>
+    <string name="Then_click_one_exit_procedure">再按一次退出程序</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="cage_group">插组制定</string>
+    <string name="pigeons_data">集鸽数据</string>
+    <string name="serach_name_or_footnumber">姓名、足环号码</string>
+    <string name="report_group">插组报到</string>
+    <string name="report_data">报到数据</string>
+    <string name="ranking">名次</string>
+    <string name="name">姓名</string>
+    <string name="foot_number">足环号码</string>
+    <string name="uniform_ranking">统排</string>
+    <string name="pigeon_special_words_race_area" translatable="false">司放地点：</string>
+    <string name="pigeon_special_words_race_ckkj" translatable="false">参考空距：</string>
+    <string name="pigeon_special_words_race_kj" translatable="false">空距：</string>
+    <string name="pigeon_special_words_race_xskj" translatable="false">训赛空距：</string>
+    <string name="pigeon_special_words_race_bskj" translatable="false">比赛空距：</string>
+    <string name="pigeon_special_words_race_sfys" translatable="false">司放羽数：</string>
+    <string name="pigeon_special_words_race_tq" translatable="false">天气：</string>
+    <string name="pigeon_special_words_race_sfsj" translatable="false">司放时间：</string>
+    <string name="pigeon_special_words_race_sfzb" translatable="false">司放坐标：</string>
+    <string name="pigeon_special_words_race_slys" translatable="false">上笼羽数：</string>
+    <string name="pigeon_special_words_race_jgwb" translatable="false">集鸽完毕</string>
+    <string name="pigeon_special_words_race_slwb" translatable="false">上笼完毕</string>
+    <string name="pigeon_special_words_race_detial_area" translatable="false">司放地点:</string>
+    <string name="pigeon_special_words_race_detial_ckkj" translatable="false">参考空距:</string>
+    <string name="pigeon_special_words_race_detial_bskj" translatable="false">比赛空距:</string>
+    <string name="pigeon_special_words_race_detial_hyph" translatable="false">会员棚号:</string>
+    <string name="pigeon_special_words_race_detial_sgys" translatable="false">赛鸽羽色:</string>
+    <string name="pigeon_special_words_race_detial_sgfs" translatable="false">赛鸽分速:</string>
+    <string name="pigeon_special_words_race_detial_kj" translatable="false">空距:</string>
+    <string name="pigeon_special_words_race_detial_xskj" translatable="false">训赛空距:</string>
+    <string name="pigeon_special_words_race_detial_sfys" translatable="false">司放:</string>
+    <string name="pigeon_special_words_race_detial_tq" translatable="false">天气:</string>
+    <string name="pigeon_special_words_race_detial_fl" translatable="false">风力:</string>
+    <string name="pigeon_special_words_race_detial_fx" translatable="false">风向:</string>
+    <string name="pigeon_special_words_race_detial_sfsj" translatable="false">司放时间:</string>
+    <string name="pigeon_special_words_race_detial_sfzb" translatable="false">司放坐标:</string>
+    <string name="pigeon_special_words_race_detial_slys" translatable="false">上笼羽数:</string>
+    <string name="pigeon_special_words_race_detial_jgwb" translatable="false">集鸽完毕</string>
+    <string name="pigeon_special_words_race_detial_slwb" translatable="false">上笼完毕</string>
+    <string name="pigeon_special_words_race_detial_cpz" translatable="false">裁判长:</string>
+    <string name="pigeon_special_words_race_detial_sfz" translatable="false">司放长:</string>
+    <string name="pigeon_special_words_race_detial_cpy" translatable="false">裁判员:</string>
+    <string name="ranking_temp">暂排名次</string>
+
+    <string name="format_pay_account_balance_tips">余额%1$s元,支付扣除%2$s元</string>
+    <string name="format_pay_account_score_tips">我的鸽币%1$s,兑换消耗%2$s鸽币</string>
+    <string name="no_cache">暂无缓存</string>
+    <string name="immediate_experience">立即体验</string>
+    <string name="title_activity_feed_back_result_list">FeedBackResultListActivity</string>
+
+    <string name="text_temperature">%1$s°C</string>
+    <string name="text_wind_direction">%1$s风</string>
+
+    <string name="message_not_open_pigeon_message">您当前尚未开通鸽信通服务！开通成功立即赠送10000条短信,请先提交个人信息</string>
+    <string name="message_pigeon_message_count_not_enough">你的短信不足1000条，请即时充值</string>
+
+    <string name="string_sign_info">当前签名为：【%1$s】</string>
+
+    <string name="string_text_send_message">发送短信</string>
+    <string name="string_text_phone_book">电话薄</string>
+    <string name="string_text_common_message">短语库</string>
+    <string name="string_text_send_history">发送记录</string>
+    <string name="string_text_modify_sign">修改签名</string>
+    <string name="string_text_ic_user_helper">使用帮助</string>
+    <string name="string_text_ic_person_message">个人信息</string>
+    <string name="string_text_user_greement">用户协议</string>
+
+
+    <string name="string_text_contacts_number">此分组有%1$s人</string>
+    <string name="string_text_select_contacts_number">已经选择%1$s个联系人</string>
+
+    <string name="string_text_message_history_cpigeon_hint">中鸽网提示：由于信息发送的数据量大，只能查询一年内发送的短信，请您选择月份，系统按照您选择的月份显示结果</string>
+
+    <string name="string_text_date_for_message_history">%1$s月短信发送记录</string>
+    <string name="string_text_date_for_message_number">发送条数：%1$s条</string>
+
+    <string name="string_text_message_addressee_number">收信人数：%1$s</string>
+
+    <string name="string_text_create_message_order_explain">鸽信通%1$s元/1万条，不限时间，发完为止。</string>
+    <string name="string_text_foot_search_hint">您当前尚未购买套餐，最多显示2条结果！足环号码格式越准确，查询速度越快！推荐使用足环号码格式：2018-22-1234567</string>
+    <string name="string_text_foot_search_hot_hint">温馨提示：您的查询记录已被我们保存，切勿将您查询到的数据提供给网鸽者利用！中鸽网提倡鸽友将查询到的赛鸽归还失主，大家一起创 建和谐，让爱鸽共翔蓝天！</string>
+    <string name="previous">Go to previous</string>
+    <string name="next">Go to next</string>
+    <string name="calendar">Calendar</string>
+
+    <string name="string_hint_get_gb">您已经获取%1$s个鸽币，请再接再厉</string>
+
+    <string name="string_foot_search_help1">中鸽网为鸽友提供免费足环查询服务，支持足环号码模糊查询。</string>
+    <string name="string_foot_search_help2">足环查询套餐服务可以使用积分兑换，查询到结果后扣除次数。普通套餐查询100次，每次显示5条记录，不支持模糊搜索和显示鸽主姓名；VIP套餐查询200次，每次显示所有结果，可以搜索和显示鸽主姓名。</string>
+    <string name="string_foot_search_help3">历史查询记录查看搜索结果不会扣除足环查询套餐服务次数。购买的最新足环查询套餐服务，会覆盖之前的足环套餐服务，请谨慎操作 </string>
+
+    <string name="string_foot_search_remark">当前为您使用%1$s，%2$s，剩余查询次数：%3$s次。足环号码格式越准确，查询速度越快！推荐使用足环号码格式：2018-22-1234567、2018221234567</string>
+    <string name="string_foot_search_count">您已经开通套餐，剩余查询：%1$s次 </string>
+
+    <string name="string_circle_message_show_type_public">所有人可见</string>
+    <string name="string_circle_message_show_type_friend">好友可见</string>
+    <string name="string_circle_message_show_type_person">自己可见</string>
+
+    <string name="string_text_not_show">不显示</string>
+
+    <string name="string_pigeon_message_balance_count">剩余短信条数：%1$s</string>
+    <string name="message_permission_hint">请去设置相关权限，没有权限应用不能正常使用</string>
+
+    <string name="string_share_video">http://118.123.244.89:818/Share?id=</string>
+    <string name="string_share_circle">http://www.cpigeon.com:818/Share/gmq?id=</string>
+    <string name="string_message_content_count">%1$s/200</string>
+    <string name="history_grade_search_number">剩余查询次数%1$s次</string>
+    <string name="string_pigeon_master">鸽主姓名 %1$s</string>
+    <string name="string_line_char_scroll_behavior">com.cpigeon.app.modular.matchlive.view.LineChart$ScrollingViewBehavior</string>
+
+    <string name="str_line_seconds">00.00\"</string>
+
+    <string name="str_copyright_information_hint">天气仅供参考，中鸽网提醒您切勿作为商业用途！</string>
+    <string name="str_new_circle_message_count">%1$s条新消息</string>
+
+    <string name="text_send_code">发送验证码</string>
+    <string name="btn_resend_count">%1$ss重新获取</string>
+    <string name="string_push_circle_hint">温馨提示：为了广大鸽友更好的互动，发布动态的同时，我们将在“附近”中显示您的发布位置</string>
+
+    <string name="string_loft">gp</string>
+    <string name="string_association">xh</string>
+
+    <string name="message_set_invoice_hint">温馨提示：发票信息必须正确吻合！否则开出发票后公司无法处理，个人无法开具发票！纸质发票邮费快递到付！</string>
+    <string name="string_push_circle_hint_2">鸽迷圈仅供鸽友分享精彩赛鸽瞬间、交流鸽经，请勿发布广告推销等内容，请遵守国家互联网法规，违者将删除信息并永久封号！</string>
+
+    <string name="str_shoot_org_hint">赛事组织可填写协会，鸽舍，比赛等组织名称</string>
+
+</resources>

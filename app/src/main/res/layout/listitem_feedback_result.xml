@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_16"
+        android:paddingLeft="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/tv_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_16"
+            android:layout_toLeftOf="@id/tv_item_name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="反馈内容"
+            android:textColor="#3b3b3b"
+            android:textSize="@dimen/sp_16" />
+
+
+        <TextView
+            android:id="@+id/tv_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_content"
+            android:layout_marginTop="5dp"
+            android:text="消费鸽币：3鸽币"
+            android:textColor="#8B8A8A" />
+
+        <TextView
+            android:id="@+id/tv_item_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_item_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_16"
+            android:text="待回复"
+            android:textColor="#ff3a3a" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/aciv_enter"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:rotation="-90"
+            app:srcCompat="@drawable/ic_arrow_down" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

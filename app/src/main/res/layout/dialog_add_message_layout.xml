@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_round_white_5"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="哈哈啊哈"
+        android:layout_centerHorizontal="true"
+        android:textSize="14dp"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/content"
+        android:layout_marginTop="13dp"
+        android:layout_below="@id/title"
+        android:maxLines="5"
+        android:gravity="left"
+        android:background="@color/white"
+        tools:text="sdfadfljka;ldskjfl;akdjffadf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/content"
+        layout="@layout/item_line_view_layout"/>
+
+    <TextView
+        android:id="@+id/btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:paddingLeft="32dp"
+        android:textColor="@color/gray_m"
+        android:paddingTop="8dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/line"
+        android:background="@drawable/shape_str_gray_5_radio"
+        android:textSize="16dp"/>
+
+
+    <TextView
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="确定"
+        android:paddingLeft="32dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="8dp"
+        android:layout_below="@+id/line"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button_primary_bg"
+        android:textColor="@color/white"
+        android:textSize="16dp"/>
+
+
+
+</RelativeLayout>

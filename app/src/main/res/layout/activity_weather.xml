@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:id="@+id/toolbar"
+            android:fitsSystemWindows="true"
+            android:clipToPadding="true"
+            app:titleTextColor="@android:color/white">
+
+            <!--<TextView
+                android:id="@+id/toolbar_title"
+                tools:text="中鸽网"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>-->
+
+            <com.cpigeon.app.utils.customview.MarqueeTextView
+                android:id="@+id/toolbar_title"
+                style="@style/Marquee"
+                tools:text="中鸽网"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top" />
+
+    <ImageView
+        android:id="@+id/map_image"
+        android:visibility="gone"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_weather"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/background_background_8bc9e5_radius_5"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+
+    <TextView
+        android:id="@+id/displacement"
+        android:layout_below="@id/top"
+        android:layout_margin="@dimen/large_horizontal_margin_15"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:background="@drawable/background_solid_grag_a_radius_2"
+        android:layout_alignParentRight="true"
+        tools:text="1231231"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top">
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_white_radio_2">
+
+            <RelativeLayout
+                android:id="@+id/fl_icon"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_blue_radio_5">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerHorizontal="true"
+                    tools:src="@drawable/ic_weather_white_cloudy" />
+
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/icon"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:text="12°C" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/fl_icon"
+                android:gravity="left"
+                android:textColor="@color/light_black"
+                android:textSize="16dp"
+                tools:text="四川市绵阳" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/fl_icon">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/light_black"
+                    android:textSize="12dp"
+                    android:text="多云" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/text1"
+                    android:gravity="center"
+                    android:textColor="@color/light_black"
+                    android:textSize="12dp"
+                    android:text="西南风" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/marker"
+            android:layout_centerHorizontal="true"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@+id/rl_1"
+            android:src="@mipmap/ic_map_location"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

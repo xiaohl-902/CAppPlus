@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <com.cpigeon.app.utils.customview.SearchEditText
+        android:id="@+id/widget_title_bar_search"
+        style="@style/searchedittextstyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_edittext_height"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:dropDownHeight="12dp"
+        android:hint="搜索"
+        android:paddingRight="@dimen/dp_10"
+        android:textColor="@color/light_black2"
+        android:textColorHint="@color/search_edit_gray"
+        app:drawableDel="@mipmap/ic_delete"
+        app:search_gravity="left" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+
+
+        <TextView
+            android:id="@+id/contact_dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+
+        <com.cpigeon.app.message.ui.selectPhoneNumber.widget.TouchableRecyclerView
+            android:id="@+id/contact_member"
+            android:layout_above="@+id/text_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="24dp" />
+
+
+        <com.cpigeon.app.message.ui.selectPhoneNumber.widget.ZSideBar
+            android:id="@+id/contact_zsidebar"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/text_btn"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:visibility="visible"
+            />
+
+
+        <TextView
+            android:id="@+id/text_btn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="确定"
+            android:background="@color/message_button"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+</LinearLayout>

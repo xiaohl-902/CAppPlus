@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_toolbar"/>
+
+    <ProgressBar
+        android:id="@+id/pb_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_web_progressbar_height" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_above="@+id/bottom_comment"
+        android:layout_marginBottom="@dimen/large_vertical_margin"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_marginTop="@dimen/big_large_horizontal_margin"
+                android:layout_marginLeft="@dimen/medium_horizontal_margin"
+                android:layout_marginRight="@dimen/medium_horizontal_margin"
+                android:gravity="center"
+                android:textSize="@dimen/big_text_size"
+                tools:text="关于信鸽"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/introduce"
+                android:layout_marginTop="@dimen/large_horizontal_margin"
+                android:gravity="center"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/small_text_size"
+                tools:text="关于信鸽"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.cpigeon.app.view.MyWebView
+                android:id="@+id/web_view"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/large_horizontal_margin_15"
+                android:paddingRight="@dimen/large_horizontal_margin_15"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/text1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="相关鸽闻"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:textSize="@dimen/big_text_size"
+                android:padding="@dimen/large_horizontal_margin_15"
+                android:drawableBottom="@mipmap/ic_related_under_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/large_horizontal_margin_15"
+                android:paddingRight="@dimen/large_horizontal_margin_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/bottom_comment"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/item_new_comment_layout"/>
+
+</RelativeLayout>

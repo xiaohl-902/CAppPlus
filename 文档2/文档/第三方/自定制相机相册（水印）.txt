@@ -1,0 +1,10 @@
+
+
+
+
+参考地址：
+		照片水印：
+		https://github.com/jinguangyue/Android-CustomCamera/blob/master/README_CN.md
+
+		视频水印：
+		http://cache.baiducontent.com/c?m=9f65cb4a8c8507ed4fece763105392230e54f73b67848c5425938448e435061e5a24feef22721250d4952f370bab4f48afad762438507ce1db95d31ccabbe33f5efb3042710bf74505a31eb8ca3632b05087299eb86fe6ad8331&p=90678e1d89904ead08e2947d0a5497&newp=8673c64ad48a16e508e2947d0a4ec1231610db2151ddd701298ffe0cc4241a1a1a3aecbf2127160fd2c27c6007a54f5fe0f33d71360634f1f689df08d2ecce7e66df6d&user=baidu&fm=sc&query=android+%CA%D3%C6%B5%CB%AE%D3%A1&qid=8d15a47d0000c97f&p1=6

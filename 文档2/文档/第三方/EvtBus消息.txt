@@ -1,0 +1,35 @@
+
+
+
+
+使	用：
+		
+	接收页：
+		EventBus.getDefault().register(this);//在当前界面注册一个订阅者
+
+
+		@Subscribe //订阅事件FirstEvent
+		public void onEventMainThread(String strRefresh）{
+		Log.d(TAG, "订阅返回");
+		if (strRefresh.equals("playListRefresh")) {
+			mAdapter.getData().clear();
+			mAdapter.notifyDataSetChanged();
+			pi = 1;
+			ps = 10;
+			presenter.getGYTRaceList(ps, pi, searchEdittext.getText().toString(), "", "");//开始获取数据
+			}
+		}
+
+
+
+		@Override
+		protected void onDestroy() {
+			super.onDestroy();
+			EventBus.getDefault().unregister(this);//取消注册
+		}
+
+
+
+	发送页
+		//发布事件（刷新数据）
+		EventBus.getDefault().post("playListRefresh");

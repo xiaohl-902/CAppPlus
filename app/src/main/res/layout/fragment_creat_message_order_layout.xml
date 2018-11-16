@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_margin="@dimen/large_horizontal_margin_15"
+        android:layout_marginBottom="16dp"
+        tools:text="@string/string_text_create_message_order_explain" />
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/item_line_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_explain" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/large_horizontal_margin_15"
+        android:text="短信充值条数"
+        android:textSize="@dimen/medium_text_size" />
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_marginTop="16dp"
+        android:layout_margin="@dimen/medium_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_select1"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_gray_true_b_withe_st_blue"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="1万条"
+            android:textSize="@dimen/medium_text_size" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_select2"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_gray_true_b_withe_st_blue"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_centerHorizontal="true"
+            android:text="2万条"
+            android:textSize="@dimen/medium_text_size" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_select3"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_gray_true_b_withe_st_blue"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:layout_alignParentRight="true"
+            android:text="3万条"
+            android:textSize="@dimen/medium_text_size" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_select4"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_gray_true_b_withe_st_blue"
+            android:gravity="center"
+            android:layout_below="@+id/tv_select1"
+            android:padding="6dp"
+            android:text="4万条"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text_size" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_select5"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/tv_select1"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_gray_true_b_withe_st_blue"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:padding="6dp"
+            android:text="其他："
+            android:textSize="@dimen/medium_text_size" />
+
+
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tv_select1"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:text="万条"
+            android:textSize="@dimen/medium_text_size" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/ed_count"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/tv_select5"
+            android:layout_toLeftOf="@id/text3"
+            android:background="@drawable/background_round_white_5"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:inputType="number"
+            tools:text="9999"
+            android:maxLength="4"
+            android:textSize="@dimen/medium_text_size"
+            android:layout_below="@+id/tv_select3"/>
+
+
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/line2"
+        layout="@layout/item_line_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/large_horizontal_margin_15"
+        android:layout_marginRight="@dimen/large_horizontal_margin_15"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/rl2" />
+
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_marginTop="16dp"
+        android:textSize="@dimen/medium_text_size"
+        android:text="付款金额"
+        android:layout_marginLeft="@dimen/large_horizontal_margin_15"
+        android:layout_below="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/order_price"
+        android:layout_marginTop="@dimen/large_horizontal_margin_15"
+        android:textSize="@dimen/medium_text_size"
+        tools:text="¥ 850"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/light_red"
+        android:layout_below="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <include
+        android:id="@+id/line3"
+        layout="@layout/item_line_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/order_price" />
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/message_button">
+
+        <TextView
+            android:id="@+id/text_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="提交订单"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

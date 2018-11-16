@@ -1,0 +1,28 @@
+
+
+	
+
+	SGT_UploadFootImage接口，把参数foot改为id，参数为足环号码索引ID
+
+
+
+获取足环号码拍照图片
+请求地址：【POST】/CHAPI/V1/SGT_GetImagesFoot
+说明：获取足环号码拍照图片。
+适用版本：V1
+添加日期：2018-1-23
+必需参数：
+uid：会员ID
+id：足环记录索引ID
+
+成功返回：
+{"status":true,"errorCode":0,"msg":"","data":[{
+"sj":"2018/1/23 17:38:55",//上笼时间
+"imgurl":"原图图片地址",
+"slturl":"缩略图地址",
+"tag":"入棚拍照",
+"updatefootinfo":""//足环修改提示信息
+}]}
+
+返回码：
+用户通行证验证

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/expand"
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="@color/gray_m"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="点击查看更多评论"
+        android:layout_marginBottom="@dimen/small_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

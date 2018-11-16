@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_above="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:padding="6dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:text="鸽舍地图定位信息仅供参考"
+        android:gravity="center"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

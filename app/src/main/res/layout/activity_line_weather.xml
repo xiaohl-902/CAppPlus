@@ -1,0 +1,1152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!--   -->
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_white_radio_2">
+
+            <RelativeLayout
+                android:id="@+id/fl_icon"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_blue_radio_5">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerHorizontal="true"
+                    tools:src="@drawable/ic_weather_white_cloudy" />
+
+                <TextView
+                    android:id="@+id/temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/icon"
+                    android:layout_centerHorizontal="true"
+                    android:text="12°C"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/fl_icon"
+                android:gravity="left"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                tools:text="四川市绵阳" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/address"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/fl_icon">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="center"
+                    android:text="多云"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/text1"
+                    android:gravity="center"
+                    android:text="西南风"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/marker"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/rl_1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:src="@mipmap/ic_map_location"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--点标记总        -->
+    <LinearLayout
+        android:id="@+id/llz_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="180dp"
+            android:layout_height="60dp">
+
+            <!--总的地点-->
+            <LinearLayout
+                android:id="@+id/llz_place"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                android:textColor="@color/color_theme">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img_weather"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_weather_white_sunny_b" />
+
+                    <!--地名-->
+                    <TextView
+                        android:id="@+id/tv_place_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:text="巴中市"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10sp" />
+
+                    <!--距离-->
+                    <TextView
+                        android:id="@+id/tv_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="100km"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_weather"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhite"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_weather1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="天气"
+                        android:textColor="@color/color_theme"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_weather2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="预报"
+                        android:textColor="@color/color_theme"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--三角-->
+            <TextView
+                android:id="@+id/tv_triangle"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:rotation="45"
+                android:textColor="@color/color_theme" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/img_start_stop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white">
+
+            <!--<TextView
+                android:id="@+id/toolbar_title"
+                tools:text="中鸽网"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>-->
+
+            <com.cpigeon.app.utils.customview.MarqueeTextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                tools:text="中鸽网" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top" />
+
+
+    <!--定位当前位置-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/top"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="18.5dp"
+            android:layout_height="18.5dp"
+            android:layout_centerInParent="true"
+            android:background="@color/colorWhite" />
+
+        <ImageView
+            android:id="@+id/img_locate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/svg_locatae" />
+
+
+    </RelativeLayout>
+
+    <!--司放地归巢地 总-->
+    <RelativeLayout
+        android:id="@+id/rlz_sfd_gcd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/background_line_weather"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:id="@+id/llz_sfd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/line_fly_place" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="26dp"
+                    android:text="司放地"
+                    android:textColor="#010101"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/z_et_fly_place"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:focusable="true"
+                    android:hint="请输入司放地或选择地图定位"
+                    android:singleLine="true"
+                    android:textColor="@color/color_theme"
+                    android:textColorHint="#c9c9ce"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f0f0f0" />
+
+            <LinearLayout
+                android:id="@+id/llz_gcd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/line_homing_place" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="26dp"
+                    android:text="归巢地"
+                    android:textColor="#010101"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/z_et_homing_place"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:focusable="true"
+                    android:hint="请输入归巢地或选择地图定位"
+                    android:singleLine="true"
+                    android:textColor="@color/color_theme"
+                    android:textColorHint="#c9c9ce"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_line_weather3"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_arrow"
+            android:layout_width="76dp"
+            android:layout_height="27dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_line_weather2"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/img_l_arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_l_top" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--司放地 android:visibility="gone" -->
+    <RelativeLayout
+        android:id="@+id/rlz_sfd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="司放地"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_locate_current_position_sfd"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/line_weather_lr2"
+                android:layout_marginRight="@dimen/line_weather_lr2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_line_weather4"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="定位当前位置"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_line_weather2" />
+
+            <!--舍弃-->
+            <LinearLayout
+                android:id="@+id/ll_click_sfd_sure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="24dp"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="选择地点(请点击地图选择司放地点)"
+                    android:textColor="#808080"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/click_sfd_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击定位"
+                    android:textColor="@color/color_theme"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="搜索地方地地名"
+                    android:textColor="@color/bg_line_weather3_tv"
+                    android:textSize="@dimen/line_weather_tv_size" />
+
+                <!--舍弃-->
+                <TextView
+                    android:id="@+id/input_sfd_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="定位"
+                    android:textColor="@color/color_theme"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_input_sfd"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:background="@drawable/background_stroke_gray_corner_3"
+                android:gravity="center"
+                android:hint="请输入司放地，确定搜索"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/color_line_weather3_et"
+                android:textColorHint="@color/color_line_weather3_et_hint"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/bg_line_weather2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="输入司放地坐标"
+                    android:textColor="@color/bg_line_weather3_tv"
+                    android:textSize="@dimen/line_weather_tv_size" />
+
+
+            </LinearLayout>
+
+            <!--输入经度-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_weather_item_h"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_sfd_lo1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="000°"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_sfd_lo2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="00'"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_sfd_lo3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="@string/str_line_seconds"
+                    android:inputType="number|numberDecimal"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <!--输入纬度-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_weather_item_h"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_sfd_la1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="00°"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_sfd_la2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="00'"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_sfd_la3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="@string/str_line_seconds"
+                    android:inputType="number|numberDecimal"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/input_sfd_coordinate_sure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="15dp"
+                android:gravity="right|center_vertical"
+                android:text="使用坐标定位"
+                android:textColor="@color/color_theme"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_line_weather2" />
+
+            <LinearLayout
+                android:id="@+id/ll_select_sfd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:clickable="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="其他方式"
+                    android:textColor="@color/bg_line_weather3_tv"
+                    android:textSize="@dimen/line_weather_tv_size" />
+
+                <TextView
+                    android:id="@+id/tv_select_sfd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择参考司放地"
+                    android:textColor="@color/color_theme"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_close1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:src="@mipmap/line_we_close" />
+    </RelativeLayout>
+
+    <!--归巢地   -->
+    <RelativeLayout
+        android:id="@+id/rlz_gcd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="归巢地"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_locate_current_position_gcd"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/line_weather_lr2"
+                android:layout_marginRight="@dimen/line_weather_lr2"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_line_weather4"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="定位当前位置"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_line_weather2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="搜索地方地地名"
+                    android:textColor="@color/bg_line_weather3_tv"
+                    android:textSize="@dimen/line_weather_tv_size" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_input_gcd"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:background="@drawable/background_stroke_gray_corner_3"
+                android:gravity="center"
+                android:hint="请输入归巢地，确定搜索"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/color_line_weather3_et"
+                android:textColorHint="@color/color_line_weather3_et_hint"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/bg_line_weather2" />
+
+
+            <!--舍弃-->
+            <LinearLayout
+                android:id="@+id/ll_click_gcd_sure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="选择地点(请点击地图选择归巢地点)"
+                    android:textColor="#808080"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/click_gcd_sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击定位"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+            <!--舍弃-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="15dp"
+                android:background="#e6e6e6"
+                android:visibility="gone" />
+
+
+            <!--&lt;!&ndash;舍弃&ndash;&gt;-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="15dp"-->
+            <!--android:layout_marginLeft="@dimen/line_weather_lr"-->
+            <!--android:layout_marginRight="@dimen/line_weather_lr"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:visibility="gone">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="输入归巢地"-->
+            <!--android:textColor="#808080"-->
+            <!--android:textSize="13sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_input_gcd"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="确定定位"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:textSize="13sp" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--&lt;!&ndash;舍弃&ndash;&gt;-->
+            <!--<EditText-->
+            <!--android:id="@+id/et_input_gcd"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/line_weather_item_h"-->
+            <!--android:layout_marginLeft="@dimen/line_weather_lr"-->
+            <!--android:layout_marginRight="@dimen/line_weather_lr"-->
+            <!--android:background="@drawable/background_stroke_gray_corner_3"-->
+            <!--android:gravity="center"-->
+            <!--android:hint="请输入归巢地，确定搜索"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/color_line_weather3_et"-->
+            <!--android:textColorHint="@color/color_line_weather3_et_hint"-->
+            <!--android:textSize="11sp"-->
+            <!--android:visibility="gone" />-->
+
+            <!--&lt;!&ndash;舍弃&ndash;&gt;-->
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_marginLeft="@dimen/line_weather_lr"-->
+            <!--android:layout_marginRight="@dimen/line_weather_lr"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:background="#e6e6e6"-->
+            <!--android:visibility="gone" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="输入归巢地坐标(度分秒)"
+                    android:textColor="@color/bg_line_weather3_tv"
+                    android:textSize="@dimen/line_weather_tv_size" />
+
+            </LinearLayout>
+
+
+            <!--输入经度-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_weather_item_h"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_gcd_lo1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="000°"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_gcd_lo2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="00'"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_gcd_lo3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="@string/str_line_seconds"
+                    android:inputType="number|numberDecimal"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <!--输入纬度-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_weather_item_h"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_gcd_la1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="00°"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_gcd_la2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="00'"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+                <EditText
+                    android:id="@+id/et_gcd_la3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_stroke_gray_corner_3"
+                    android:gravity="center"
+                    android:hint="@string/str_line_seconds"
+                    android:inputType="number|numberDecimal"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/color_line_weather3_et"
+                    android:textColorHint="@color/color_line_weather3_et_hint"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_coordinate_gcd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:layout_marginTop="15dp"
+                android:gravity="right|center_vertical"
+                android:text="使用坐标定位"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/bg_line_weather2" />
+
+            <LinearLayout
+                android:id="@+id/ll_select_shed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/line_weather_lr"
+                android:layout_marginRight="@dimen/line_weather_lr"
+                android:clickable="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="其他方式"
+                    android:textColor="@color/bg_line_weather3_tv"
+                    android:textSize="@dimen/line_weather_tv_size" />
+
+                <TextView
+                    android:id="@+id/tv_select_gp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择公棚"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img_close2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:src="@mipmap/line_we_close" />
+
+    </RelativeLayout>
+
+
+    <!--版权信息提示  分享-->
+    <TextView
+        android:id="@+id/tv_copyright_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/str_copyright_information_hint"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

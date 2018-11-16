@@ -1,0 +1,32 @@
+中鸽助手分享：/Share/zgzs
+创建邀请码：CreateYaoQingMa
+参数:uid
+成功返回：
+{"status":true,"errorCode":0,"msg":"您已成功创建邀请码！","data": {"yqm":"5rlnotZ6HAcx9IYIygqkn9BSJJpLmF1Awdg60CfhkKqQJFMnGKwhiITG8f5soPkv"}}
+
+创建邀请码成功后，将获取的邀请码作为参数传递给/Share/zgzs，示例如下：
+/Share/zgzs?yqm=5rlnotZ6HAcx9IYIygqkn9BSJJpLmF1Awdg60CfhkKqQJFMnGKwhiITG8f5soPkv
+
+
+当前为无限制邀请，只有前十位可以获取鸽币
+
+
+
+个人服务推荐URL：
+中鸽网APP：/Share/zgw
+足环查询：/Share/zhcx
+天下鸽谱：/Share/txgp
+
+
+中鸽助手分享：/Share/zgzs
+当前为无限制邀请，只有前十位可以获取鸽币
+
+点击分享，先调用下面的接口创建邀请码。
+
+创建邀请码：CreateYaoQingMa
+参数:uid
+成功返回：
+{"status":true,"errorCode":0,"msg":"您已成功创建邀请码！","data": {"yqm":"5rlnotZ6HAcx9IYIygqkn9BSJJpLmF1Awdg60CfhkKqQJFMnGKwhiITG8f5soPkv"}}
+
+创建邀请码成功后，将获取的邀请码作为参数传递给/Share/zgzs，示例如下：
+/Share/zgzs?yqm=5rlnotZ6HAcx9IYIygqkn9BSJJpLmF1Awdg60CfhkKqQJFMnGKwhiITG8f5soPkv

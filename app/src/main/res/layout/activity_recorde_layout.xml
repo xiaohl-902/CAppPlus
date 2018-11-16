@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+
+        <!--中间水印图片-->
+        <ImageView
+            android:id="@+id/watermark_center_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.4"
+            android:src="@mipmap/wartermark"
+            android:visibility="invisible" />
+
+
+        <com.cpigeon.app.view.video.widget.CameraView
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.cpigeon.app.view.video.widget.FocusImageView
+            android:id="@+id/focusImageView"
+            android:layout_width="75dip"
+            android:layout_height="75dip"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible"
+            app:focus_fail_id="@mipmap/focus_focus_failed"
+            app:focus_focusing_id="@mipmap/focus_focusing"
+            app:focus_success_id="@mipmap/focus_focused" />
+
+        <RelativeLayout
+            android:id="@+id/water_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/time"
+                    tools:text="100"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/location"
+                    tools:text="成都市四川省"
+                    android:textSize="12dp"
+                    android:layout_below="@+id/time"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/image"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@id/rl1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:alpha="0.6"
+                android:src="@mipmap/water_lcon"/>-->
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_alignParentBottom="true"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_wartermark"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/btn_camera_switch"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:src="@drawable/selector_rewardcamera" />
+
+            <!--视频录制完成按钮-->
+            <ImageButton
+                android:id="@+id/video_wc"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_next_step_a"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+
+        <!--水印-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+            <include layout="@layout/layout_water1" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Black4"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.cpigeon.app.view.video.widget.CircularProgressView
+                android:id="@+id/mCapture"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/bt_capture"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="按住拍"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <!--<Button-->
+        <!--android:id="@+id/ac_btnb"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="拍照" />-->
+
+        <ImageView
+            android:id="@+id/ac_imgv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#0f0"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

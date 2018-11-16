@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout
+        android:id="@+id/layout_gg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_layout_gg"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/list_header_race_detial_layout_gg_paddingbottom"
+        android:paddingLeft="@dimen/list_header_race_detial_layout_gg_paddingleft"
+        android:paddingRight="@dimen/list_header_race_detial_layout_gg_paddingright"
+        android:paddingTop="@dimen/list_header_race_detial_layout_gg_paddingtop"
+        android:visibility="gone">
+
+        <com.cpigeon.app.utils.customview.MarqueeTextView
+            android:id="@+id/list_header_race_detial_gg"
+            style="@style/Marquee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/list_header_race_detial_gg_minheight"
+            android:text="公告："
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/list_header_race_detial_textview_gg_textsize" />
+    </LinearLayout>
+
+    <include layout="@layout/fragment_race_data" />
+</LinearLayout>

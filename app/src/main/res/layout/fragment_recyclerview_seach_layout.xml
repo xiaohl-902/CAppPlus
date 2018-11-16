@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:baselineAligned="false"
+        android:layout_alignParentBottom="true"
+        android:background="@color/message_button"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_height="56dp">
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ic_left"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                tools:srcCompat="@drawable/ic_contacts_edit_name"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:id="@+id/title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:visibility="visible"
+                android:textSize="12dp"
+                android:text="重新命名" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@id/icon"
+                app:srcCompat="@mipmap/ic_contats_delete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="4dp" />
+            <TextView
+                android:id="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:visibility="visible"
+                android:textSize="12dp"
+                android:text="删除分组" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.cpigeon.app.utils.customview.SearchEditText
+        android:id="@+id/widget_title_bar_search"
+        style="@style/searchedittextstyle"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/search_edit_bg_2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_edittext_height"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:dropDownHeight="12dp"
+        android:hint="      搜索"
+        android:paddingRight="@dimen/dp_10"
+        android:textColor="@color/light_black2"
+        android:textColorHint="@color/search_edit_gray"
+        app:drawableDel="@mipmap/ic_delete"
+        app:search_gravity="left"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:paddingStart="@dimen/large_horizontal_margin_15"
+        android:paddingEnd="@dimen/large_horizontal_margin_15"
+
+        android:layout_below="@id/widget_title_bar_search"
+        android:layout_above="@id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

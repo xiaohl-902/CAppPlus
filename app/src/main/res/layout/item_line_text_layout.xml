@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/text_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text_size"
+        tools:text="相关新123123123123121212121212121212121212121212121212121212121212121212121212闻"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/large_vertical_margin"
+        android:paddingBottom="@dimen/large_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

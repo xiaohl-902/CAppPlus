@@ -1,0 +1,10 @@
+
+中鸽助手
+
+	主页：判断用户类型
+
+		GetUserType：获取用户类型
+		参数：uid 整数
+		返回值：
+		{"status":true,"errorCode":0,"msg":"","data":{"usertype":"cphelper.none"}}
+		Usertype返回类型为（公棚|协会|训鸽通|个人）：cphelper.xiehui|cphelper.gongpeng|cphelper.geren|cphelper.none

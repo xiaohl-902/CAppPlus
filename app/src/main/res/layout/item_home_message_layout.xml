@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:padding="@dimen/large_horizontal_margin_15"
+    android:layout_marginBottom="@dimen/medium_vertical_margin">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:textSize="@dimen/big_text_size"
+            android:textColor="@color/black"
+            tools:text="`12311234"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_marginTop="@dimen/large_horizontal_margin_15"
+            android:layout_marginBottom="@dimen/large_horizontal_margin_15"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size"
+            tools:text="123412"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.cpigeon.app.view.MyWebView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"/>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
+

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                style="@style/Setting_Item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_setting_item_layout_height">
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_push_enable"
+                    style="@style/Setting_Item_CheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    style="@style/Setting_Item_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/sb_push_enable"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_push_enable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="false"
+                        android:layout_toLeftOf="@id/sb_push_enable"
+                        android:text="推送消息"
+                        android:textSize="@dimen/activity_setting_item_title_textsize" />
+
+                    <TextView
+                        android:id="@+id/tv_tip_push_enable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_push_enable"
+                        android:layout_toLeftOf="@id/sb_push_enable"
+                        android:padding="2dp"
+                        android:text="关注推送开关"
+                        android:textColor="#aaaaaa"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                style="@style/Setting_Item_Split_Line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_line_width" />
+
+            <RelativeLayout
+                style="@style/Setting_Item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_setting_item_layout_height">
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_push_sound"
+                    style="@style/Setting_Item_CheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    style="@style/Setting_Item_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/sb_push_sound"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_push_sound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="false"
+                        android:text="声音提示"
+                        android:textSize="@dimen/activity_setting_item_title_textsize" />
+
+                    <TextView
+                        android:id="@+id/tv_tip_push_sound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_push_enable"
+                        android:padding="2dp"
+                        android:text="推送时的声音提示"
+                        android:textColor="#aaaaaa"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                style="@style/Setting_Item_Split_Line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_line_width" />
+
+            <RelativeLayout
+                style="@style/Setting_Item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_setting_item_layout_height">
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_push_shock"
+                    style="@style/Setting_Item_CheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    style="@style/Setting_Item_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/sb_push_shock"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_push_shock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="false"
+                        android:text="震动提示"
+                        android:textSize="@dimen/activity_setting_item_title_textsize" />
+
+                    <TextView
+                        android:id="@+id/tv_tip_push_shock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_push_enable"
+                        android:padding="2dp"
+                        android:text="推送时的震动提示"
+                        android:textColor="#aaaaaa"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/Setting_Item_Split_Line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_line_width" />
+
+            <RelativeLayout
+                android:id="@+id/rl_push_silence"
+                style="@style/Setting_Item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_setting_item_layout_height">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/aciv_enter"
+                    style="@style/Setting_Item_Explain"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:rotation="-90"
+                    app:srcCompat="@drawable/ic_arrow_down" />
+
+                <LinearLayout
+                    style="@style/Setting_Item_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/aciv_enter"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_push_silence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="false"
+                        android:text="免打扰"
+                        android:textSize="@dimen/activity_setting_item_title_textsize" />
+
+                    <TextView
+                        android:id="@+id/tv_tip_push_silence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_push_enable"
+                        android:padding="2dp"
+                        android:text="已关闭"
+                        android:textColor="#aaaaaa"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/mapView"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </com.amap.api.maps.TextureMapView>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintlayout_details"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_map_status"
+                    tools:text="asdfasdf"
+                    android:textSize="16dp"
+                    android:textColor="@color/color_orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_map_time"
+                    tools:text="asdfasdf"
+                    android:textSize="16dp"
+                    android:textColor="@color/light_red"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_map_location"
+                tools:text="asdfasdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_map_weather"
+                tools:text="asdfasdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_map_nowlocation"
+                tools:text="asdfasdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_map_nowweather"
+                tools:text="asdfasdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_map_nowareadistance"
+                tools:text="asdfasdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_map_distance"
+                tools:text="asdfasdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_map_speed"
+                tools:text="asdfasdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:id="@+id/fab_weather"
+            app:elevation="16dp"
+            android:background="@color/colorPrimary"
+            app:pressedTranslationZ="16dp"
+            android:src="@mipmap/ic_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ToggleButton
+        android:clickable="false"
+        android:background="@color/colorPrimary"
+        android:id="@+id/displaybtn"
+        android:textOn="停止回放"
+        android:textOff="开始回放"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+</LinearLayout>

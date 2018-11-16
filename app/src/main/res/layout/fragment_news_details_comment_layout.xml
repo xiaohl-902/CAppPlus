@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_comment"
+        layout="@layout/fragment_recyclerview_layout"/>
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout
+        android:id="@id/swipeLayout"
+        android:layout_above="@+id/bottom_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="@dimen/medium_horizontal_margin" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>-->
+
+
+    <include
+        android:id="@+id/bottom_comment"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/item_new_comment_layout"/>
+
+</RelativeLayout>

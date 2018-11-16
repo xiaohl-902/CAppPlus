@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_marginTop="@dimen/large_vertical_margin"
+    android:paddingTop="@dimen/large_vertical_margin"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/line_blue"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_blue_57bbdfa" />
+
+            <ImageView
+                android:id="@+id/line_yellow"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_yellow_f49562" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/small_vertical_margin"
+                android:layout_marginTop="@dimen/small_vertical_margin"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@id/line1">
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/medium_text_size"
+                    tools:text="监控中中" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left">
+
+
+                    <TextView
+                        android:id="@+id/match_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="@dimen/big_text_size"
+                        android:textStyle="bold"
+                        tools:text="6" />
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/match_count"
+                        android:layout_centerHorizontal="true"
+                        android:text="比赛场数"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <com.cpigeon.app.view.ImageView
+            android:id="@+id/icon_image"
+            android:layout_width="5dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:scaleType="center"
+            android:layout_toEndOf="@+id/rl_stats"
+            tools:src="@mipmap/ic_vertical_blue" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/small_vertical_margin"
+            android:layout_toRightOf="@id/icon_image"
+            android:layout_marginTop="@dimen/small_vertical_margin"
+            android:layout_weight="5">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                tools:text="北京市信鸽比赛123123123123123123123123123协会" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="38dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/monitoring_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:textSize="@dimen/big_text_size"
+                        android:textStyle="bold"
+                        tools:text="62" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/monitoring_count"
+                        android:layout_centerHorizontal="true"
+                        android:text="监控中"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginRight="18dp"
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/end_count"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="@dimen/big_text_size"
+                        android:textStyle="bold"
+                        tools:text="62" />
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/end_count"
+                        android:text="已结束"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="38dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/not_start_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:gravity="center"
+                        android:textSize="@dimen/big_text_size"
+                        android:textStyle="bold"
+                        tools:text="6" />
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/not_start_count"
+                        android:text="未开启"
+                        android:textSize="12dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

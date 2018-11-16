@@ -1,0 +1,77 @@
+说	明：
+	
+	让Activity随着向右的滑动手势退出，使用非常简单，最少只用一行代码就搞定。
+
+
+
+
+配	置：
+
+
+	1.Modio中build.gradle下：
+		
+		//侧边拉退出
+		dependencies {
+			compile 'com.r0adkll:slidableactivity:2.0.5'
+		}
+		
+
+	2.需要滑动的activity的主题中添加如下属性：
+
+		<!--切换activity时屏幕不变暗-->
+		<item name="android:windowIsTranslucent">true</item>
+		<!--窗口的背景设置成透明 ,这样的话在我们每个界面的根布局都要设置background,要不然就是透明的-->
+		<item name="android:windowBackground">@android:color/transparent</item>
+
+		说明：即将activity背景设为透明的，这是因为仅用java代码无法实现完整的透明。
+			将activity所在的窗口设为透明，这样拖动后就能看见上一个activity
+
+
+	3.给滑动Activity的布局根下添加背景android:background ： 
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			xmlns:tools="http://schemas.android.com/tools"
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/background_material_light">
+
+		说明：滑动activity的页面部分添加背景取消透明。
+
+实现方式：在Activity中onCreate方法内使用即可
+
+        //右滑删除第一种实现方式 ，状态栏全部向滑动的方向移动
+		Slidr.attach(this);
+
+    
+        //右滑删除第二种实现方式，状态栏的颜色随滑动渐变
+        	int primary = getResources().getColor(R.color.colorViewBackground);//结束后状态栏的颜色
+		int secondary = getResources().getColor(R.color.colorAppTheme);//结束前状态栏的颜色
+		Slidr.attach(this, primary, secondary);
+
+
+	//右滑删除第三种实现方式
+			SlidrConfig config = new SlidrConfig.Builder()
+			   .primaryColor(getResources().getColor(R.color.primary)
+			   .secondaryColor(getResources().getColor(R.color.secondary)
+			   .position(SlidrPosition.LEFT|RIGHT|TOP|BOTTOM|VERTICAL|HORIZONTAL)
+			   .sensitivity(1f)
+			   .scrimColor(Color.BLACK)
+			   .scrimStartAlpha(0.8f)
+			   .scrimEndAlpha(0f)
+			   .velocityThreshold(2400)
+			   .distanceThreshold(0.25f)
+			   .listener(new SlidrListener(){...})
+			   .build();
+			
+			   Slidr.attach(this, config);
+
+
+
+参考地址：
+	http://blog.csdn.net/zhangxu0922/article/details/51821247
+	http://www.jcodecraeer.com/a/opensource/2015/0115/2317.html
+
+
+

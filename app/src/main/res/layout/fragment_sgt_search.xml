@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.cpigeon.app.utils.customview.SearchEditText
+        android:id="@+id/search_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_et_h"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_search_edit"
+        android:drawableLeft="@mipmap/search"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:hint="足环/鸽主姓名搜索"
+        android:imeOptions="actionSearch"
+        android:padding="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textColorHint="@color/et_hint_color"
+        android:textSize="@dimen/search_et_size"
+        app:drawableDel="@mipmap/close" />
+
+
+    <include layout="@layout/fragment_recyclerview_layout" />
+
+
+</LinearLayout>

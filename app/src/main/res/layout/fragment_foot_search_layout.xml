@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/icon_title"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/ic_foot_search_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/icon_title"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="85dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/color_262626"
+            android:background="@drawable/background_blue"
+            android:drawablePadding="2dp"
+            android:drawableRight="@mipmap/ic_arrow_down_black"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="比赛年份"
+            android:textSize="@dimen/small_text_size_2" />
+
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="72dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_primary_bg"
+            android:drawableLeft="@mipmap/ic_search_white"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_size_2" />
+
+        <EditText
+            android:id="@+id/tv_search_content"
+            android:layout_width="175dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/hint_color"
+            android:layout_toLeftOf="@id/tv_search"
+            android:layout_toRightOf="@id/tv_year"
+            android:background="@drawable/background_blue"
+            android:hint="  足环号码、鸽主姓名"
+            android:padding="6dp"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/remark"
+            android:textColor="@color/text_color_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_year"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/string_text_foot_search_hint"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_look_history"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_below="@+id/remark"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/background_stroke_gray_corner_2"
+            android:drawableLeft="@mipmap/ic_foot_search_history"
+            android:drawablePadding="8dp"
+            android:textColor="@color/gray_m"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="查看以往查询记录"
+            android:textSize="@dimen/small_text_size_2" />
+
+        <TextView
+            android:id="@+id/tv_open"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/remark"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/button_primary_bg"
+            android:drawableLeft="@mipmap/ic_foot_search_open"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="点击开通服务套餐"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_size_2" />
+
+        <TextView
+            android:id="@+id/foot_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text1"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:drawablePadding="@dimen/medium_vertical_margin"
+            tools:text = "124512315123512345"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:drawableTop="@mipmap/ic_foot_nubers" />
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/string_text_foot_search_hot_hint"
+            android:textSize="12dp"
+            android:textColor="@color/text_color_gray"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

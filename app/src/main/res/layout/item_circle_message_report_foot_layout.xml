@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/item_circle_message_report_head_layout"/>
+    <EditText
+        android:id="@+id/ed_content"
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="@color/black"
+        android:padding="@dimen/large_horizontal_margin_15"
+        tools:text="1233423-5858-024850845025840258058234588"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:gravity="left|top"
+        android:maxLines="6"
+        android:minLines="6"
+        android:layout_height="wrap_content" />
+</LinearLayout>

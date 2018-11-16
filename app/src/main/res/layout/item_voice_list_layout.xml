@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/white"
+    android:layout_marginBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.cpigeon.app.view.LineTextView
+        android:id="@+id/lineVoiceType"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:line_text_title="发票类型"
+        app:line_left_text_color="@color/black"
+        app:line_right_text_color="@color/color_262626"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.cpigeon.app.view.LineTextView
+        android:id="@+id/lineTextUnit"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:line_text_title="发票抬头"
+        app:line_left_text_color="@color/black"
+        app:line_right_text_color="@color/color_262626"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.cpigeon.app.view.LineTextView
+        android:id="@+id/lineTextTFN"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:line_text_title="企业税号"
+        app:line_left_text_color="@color/black"
+        app:line_right_text_color="@color/color_262626"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tvEditVoice"
+        android:text="编辑"
+        android:padding="5dp"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:textSize="@dimen/medium_text_size"
+        android:drawableLeft="@mipmap/ic_voice_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

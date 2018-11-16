@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <!--参赛卡号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_sgt_zh_detail_h"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/sgt_info_m">
+
+        <TextView
+            android:textColor="@color/color_262626"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="参赛卡号" />
+
+        <TextView
+            android:textColor="@color/color_999999"
+            android:id="@+id/tv_cskh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/item_sgt_zh_detail_ml" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <include layout="@layout/view_dividerline_h1" />
+
+    <!--鸽主姓名-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_sgt_zh_detail_h"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/sgt_info_m">
+
+        <TextView
+            android:textColor="@color/color_262626"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="参赛鸽主" />
+
+        <TextView
+            android:textColor="@color/color_999999"
+            android:id="@+id/tv_gzxm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/item_sgt_zh_detail_ml" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <include layout="@layout/view_dividerline_h1" />
+
+    <!--足环号码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_sgt_zh_detail_h"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/sgt_info_m">
+
+        <TextView
+            android:textColor="@color/color_262626"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="所属地区" />
+
+        <TextView
+            android:textColor="@color/color_999999"
+            android:id="@+id/tv_dq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/item_sgt_zh_detail_ml" />
+
+    </LinearLayout>
+
+
+    <!--分割线-->
+    <include layout="@layout/view_dividerline_h1" />
+
+    <!--电子环号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_sgt_zh_detail_h"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/sgt_info_m">
+
+        <TextView
+            android:textColor="@color/color_262626"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电子环号" />
+
+        <TextView
+            android:textColor="@color/color_999999"
+            android:id="@+id/tv_dzhh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/item_sgt_zh_detail_ml" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <include layout="@layout/view_dividerline_h1" />
+
+
+    <!--赛鸽羽色-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_sgt_zh_detail_h"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/sgt_info_m">
+
+        <TextView
+            android:textColor="@color/color_262626"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="赛鸽羽色" />
+
+        <TextView
+            android:textColor="@color/color_999999"
+            android:id="@+id/tv_sgys"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/item_sgt_zh_detail_ml" />
+    </LinearLayout>
+
+
+    <!--分割线-->
+    <include layout="@layout/view_dividerline_h1" />
+
+
+
+
+    <!--入鹏时间-->
+    <LinearLayout
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_sgt_zh_detail_h"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/sgt_info_m">
+
+        <TextView
+            android:textColor="@color/color_262626"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="入棚时间" />
+
+        <TextView
+            android:textColor="@color/color_999999"
+            android:id="@+id/tv_rpsj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/item_sgt_zh_detail_ml" />
+    </LinearLayout>
+
+
+</LinearLayout>

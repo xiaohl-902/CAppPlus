@@ -1,0 +1,15 @@
+GetUserType：中鸽助手获取用户信息
+
+返回：
+usertype：cphelper.xiehui|cphelper.gongpeng|cphelper.geren|cphelper.none
+authuser：true|false 是否有鸽运通权限
+gytstatus：鸽运通状态
+0正常使用
+10000未开通
+gxtstatus：鸽信通状态
+10010;//开通鸽信通服务正在审核中。
+10011;//未开通鸽信通
+10012;//审核失败！身份证信息不属实。
+10013;//审核失败！信息不完善。
+10014;//您还未充值！请先充值。
+

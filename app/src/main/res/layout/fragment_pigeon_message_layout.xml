@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/line1"
+        android:background="@color/color_default_bg"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+
+
+    <ImageView
+        android:layout_below="@+id/line1"
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="50dp"
+        tools:src="@mipmap/ic_earth_quake" />
+
+    <com.cpigeon.app.view.MyTextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginLeft="@dimen/large_horizontal_margin_15"
+        android:layout_marginRight="@dimen/large_horizontal_margin_15"
+        tools:text="1238450234852-3458
+       923-90458230-45892-3045820-458203-458230-58203-45230-845230-458023-5823-58230-58230-58"
+        android:textColor="@color/black"
+        android:maxLines="5"
+        android:textSize="@dimen/medium_text_size" />
+
+
+    <ImageView
+        android:id="@+id/earth_anim"
+        android:layout_marginLeft="@dimen/large_horizontal_margin_15"
+        android:layout_marginRight="@dimen/large_horizontal_margin_15"
+        android:src="@drawable/ic_earth_quack_anim_1"
+        android:scaleType="centerInside"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="visible"/>
+
+
+    <LinearLayout
+        android:layout_marginBottom="16dp"
+        android:id="@+id/suns_images"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/img_layout_1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            layout="@layout/item_pigeon_message_home_layout"/>
+
+        <include
+            android:id="@+id/img_layout_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            layout="@layout/item_pigeon_message_home_layout"/>
+
+        <include
+            android:id="@+id/img_layout_3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            layout="@layout/item_pigeon_message_home_layout"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

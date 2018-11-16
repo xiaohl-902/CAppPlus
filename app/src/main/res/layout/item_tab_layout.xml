@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_vertical_margin"/>
+
+    <!--app:stl_indicatorWidth="20dp" app:stl_indicatorCornerRadius="1.5dp"-->
+    <com.cpigeon.app.utils.customview.smarttab.SmartTabLayout
+        android:id="@+id/tab_view"
+        app:stl_dividerColor="@color/white"
+        android:background="@color/white"
+        app:stl_dividerThickness="1dp"
+        app:stl_customTabTextLayoutId="@layout/item_custom_tab"
+        app:stl_customTabTextViewId="@+id/custom_text"
+        app:stl_defaultTabTextSize="15dp"
+        app:stl_defaultTabTextColor = "@color/gray_m"
+        app:stl_distributeEvenly="true"
+        app:stl_indicatorColor="@color/colorPrimary"
+        app:stl_indicatorInterpolation="smart"
+        app:stl_indicatorThickness="3dp"
+        app:stl_underlineColor="@android:color/transparent"
+        app:stl_indicatorWidth="64dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"/>
+
+    <View
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_vertical_margin"/>
+
+    <com.cpigeon.app.view.MyViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

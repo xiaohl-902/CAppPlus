@@ -1,0 +1,38 @@
+{
+    "stateCode": 2,
+    "createTime": "2017-09-2018: 18: 46",
+    "raceName": "²âÊÔ¸Ð¾õ",
+    "authStatus": 1,
+    "id": 413,
+    "mEndTime": "2017-09-2216: 25: 27",
+    "state": "¼à¿Ø½áÊø",
+    "authTime": "2017-09-2018: 19: 41",
+    "authUserInfo": {
+        "phone": 18408249730,
+        "sex": "ÄÐ",
+        "uid": 19138,
+        "name": "zg18408249730",
+        "headimgUrl": "http: //www.cpigeon.com/Content/faces/20170914155311.jpg",
+        "nickname": "À²À²À²",
+        "sign": "Meiyouta",
+        "email": ""
+    },
+    "muid": "19138.0",
+    "flyingTime": "0001-01-0108: 00: 00",
+    "longitude": 0,
+    "mTime": "2017-09-2018: 20: 11",
+    "raceImage": "",
+    "raceUserInfo": {
+        "phone": 13730873310,
+        "sex": "ÄÐ",
+        "uid": 5473,
+        "name": "pigeonof",
+        "headimgUrl": "http: //www.cpigeon.com/Content/faces/zgw_avatar1_2016012505492613O20DYJWB.jpg",
+        "nickname": "ÖÐ¸ëÍø",
+        "sign": "cpigeon",
+        "email": "2851551312@qq.com"
+    },
+    "uid": 5473,
+    "latitude": 0,
+    "flyingArea": ""
+}

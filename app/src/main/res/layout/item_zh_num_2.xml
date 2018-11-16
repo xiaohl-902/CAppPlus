@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/time_line_top"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:src="@mipmap/time_zhou_btm"/>
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="27"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="28dp"/>
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            tools:text="2017.16"/>
+
+        <ImageView
+            android:id="@+id/time_line_btm"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:src="@mipmap/time_zhou_top"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        app:cardElevation="0dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image"
+                tools:src="@mipmap/logo"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:id="@+id/image_type"
+                android:paddingLeft="@dimen/medium_horizontal_margin"
+                android:paddingTop="@dimen/big_large_vertical_margin"
+                android:paddingRight="@dimen/medium_horizontal_margin"
+                android:paddingBottom="@dimen/big_large_vertical_margin"
+                android:layout_below="@+id/image"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text_size"
+                tools:text="12124123"
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/change_tag"
+                android:layout_width="45dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/image"
+                android:scaleType="fitCenter"
+                android:layout_toRightOf="@+id/image_type"
+                android:paddingBottom="@dimen/big_large_vertical_margin"
+                android:paddingLeft="@dimen/medium_horizontal_margin"
+                android:paddingRight="@dimen/big_large_vertical_margin"
+                android:paddingTop="@dimen/big_large_vertical_margin"
+                android:text="重新拍照"
+                android:src="@mipmap/ic_foot_image_change_tag" />
+            
+            <TextView
+                android:id="@+id/remark"
+                tools:text="123212412512342342342342342342342342234234234315412314131"
+                android:layout_below="@+id/image_type"
+                android:paddingLeft="@dimen/medium_horizontal_margin"
+                android:paddingRight="@dimen/medium_horizontal_margin"
+                android:paddingBottom="@dimen/medium_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_m"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

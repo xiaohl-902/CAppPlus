@@ -1,0 +1,46 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url 'https://dl.bintray.com/drummer-aidan/maven' }
+
+        jcenter{
+            url "http://jcenter.bintray.com/"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.2'
+        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
+        classpath "io.realm:realm-gradle-plugin:3.1.0"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+        //如果你忍受不了apk龟速的编译(尤其是项目中有多个dex)，fastdex可以帮助你加快apk生成过程
+        //classpath 'com.github.typ0520:fastdex-gradle:0.8.6'
+
+        //classpath 'com.tencent.bugly:symtabfileuploader:2.1.2'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url 'https://dl.bintray.com/drummer-aidan/maven' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

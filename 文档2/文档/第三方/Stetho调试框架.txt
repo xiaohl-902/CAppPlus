@@ -1,0 +1,40 @@
+说	明：
+
+		Stetho是一个Android应用的调试工具。当你的应用集成Stetho时，开发者可以访问Chrome，
+	在Chrome Developer Tools中查看应用布局，网络请求，sqlite，preference等等，可视化一切应用
+	操作（更重要的是不用root）。
+
+
+
+配	置：
+
+	1.Modio中build.gradle下：
+		
+		dependencies {
+			compile 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+			compile 'com.facebook.stetho:stetho:1.5.0'
+		}
+
+	2.在Application类中完成初始化（中鸽网助手是启动一个服务进行初始化操作）
+	
+	        Stetho.initialize(
+                Stetho.newInitializerBuilder(this.getApplicationContext())
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this.getApplicationContext()))
+                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this.getApplicationContext()))
+                        .build());
+
+
+使用方式：
+	1.adb方式连接到设备
+
+	2.运行debug模式的app
+
+	3.在Chrome浏览器地址栏中输入chrome://inspect（注：必须google浏览器，要不点击inspect没有内容显示）
+
+	4.选择需要inspect的应用进程 
+
+
+参考地址：
+	
+	http://blog.csdn.net/u012455213/article/details/54099573
+	http://www.jianshu.com/p/a7fdcb2641e8

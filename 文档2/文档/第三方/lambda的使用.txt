@@ -1,0 +1,56 @@
+
+说	明：
+	
+		Java8的一大新特性就是较为健全的Lambda表达式，可以替代只有一个函数的接口实现，
+	告别匿名内部类，代码看起来更简洁易懂。Lambda表达式同时还提升了对集合的迭代、遍历、
+	过滤数据的操作。
+
+
+前	提：
+
+	jdk1.8
+
+
+	
+配	置：
+
+	1.Modio中build.gradle下：
+		
+		android {
+    			compileOptions {
+				sourceCompatibility JavaVersion.VERSION_1_8
+				targetCompatibility JavaVersion.VERSION_1_8
+			}
+		}
+	
+	2.project中build.gradle下：
+
+		apply plugin: 'me.tatarka.retrolambda'
+
+	
+	3.project中build.gradle下：
+
+	buildscript {
+		dependencies {
+			classpath 'me.tatarka:gradle-retrolambda:3.6.1'
+		}
+	}
+
+
+
+使用方式：
+
+	Button button = (Button) findViewById(R.id.ac_btn);
+        button.setOnClickListener(on ->
+                Toast.makeText(MainActivity.this,"测试lambda",Toast.LENGTH_SHORT).show());
+
+
+注意事项：
+
+	多个抽象方法不能使用Lambda。
+
+参考地址:
+	
+	http://blog.csdn.net/io_field/article/details/52605218
+	http://blog.csdn.net/qq_31370269/article/details/50752445
+	http://www.jianshu.com/p/f2b58ff0b152

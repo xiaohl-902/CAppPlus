@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/matchlive_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_layout_race_info_detial"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/tv_shanglong_saigeyuse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="赛鸽羽色:null" />
+
+
+    <TextView
+        android:id="@+id/tv_shanglong_suoshuarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="所属地区:null" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_shanglong_shanglongshijian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="上笼时间:null" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_shanglong_shangchuanshijian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="上传时间:" />
+
+    <TextView
+        android:id="@+id/tv_shanglong_dianzihuanhao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="电子环号:" />
+
+    <TextView
+        android:id="@+id/tv_shanglong_suoshutuandui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="所属团队:" />
+
+    <TextView
+        android:id="@+id/tv_shanglong_chazuzhiding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="插组指定:" />
+
+    <include layout="@layout/include_live_person_foot_function_layout"/>
+
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="75dp"
+        android:layout_above="@+id/play_btn"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_monitoring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_round_white_5"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="历史监控信息"
+                    android:textColor="#05a457"
+                    android:textSize="@dimen/medium_text_size_2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/small_text_size_2"
+                    tools:text="已监控：1天16时31分33秒" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/end_point_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/small_text_size"
+                    tools:text="司放地：四川省"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/end_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/small_text_size"
+                    tools:text="司放地坐标：104°02’36’’/104°02’36’’"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/end_weather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/small_text_size"
+                    tools:text="司放地天气：多云   10°   东北风"
+                    android:textColor="@color/black"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/displacement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="空距/km：18.26"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <TextView
+                        android:id="@+id/distance"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/displacement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="空距/km：18.26"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text_size" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_arrow_down_blue"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/img_message_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/play_btn"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/ic_map_live_message"/>
+
+    <TextView
+        android:id="@+id/play_btn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#f49562"
+        android:text="开始回放"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:textSize="@dimen/medium_text_size"
+        android:background="@drawable/background_round_white_5"/>
+
+
+
+
+</RelativeLayout>

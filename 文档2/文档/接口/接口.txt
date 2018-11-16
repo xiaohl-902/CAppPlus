@@ -1,0 +1,232 @@
+太阳磁暴信息接口：
+/Other/GetTaiYangCiBao
+
+地震
+/Other/GetDiZhen
+
+
+
+训鸽通开通
+请求地址：【POST/GET】/CHAPI/V1/OpenXGT
+说明：训鸽通申请。
+适用版本：V1
+添加日期：2017-11-23
+必需参数：
+uid：用户ID
+sfzzm：身份证正面图片，data
+sfzbm：身份证背面图片，data
+xingming：身份证信息：姓名 
+xingbie：身份证信息：性别 
+minzu：身份证信息：民族
+zhuzhi：身份证信息：住址
+haoma：身份证信息：身份证号码
+qianfajiguan：身份证信息：签发机关
+youxiaoqi：身份证信息：有效期
+成功返回：
+{"status":true,"errorCode":0,"msg":"申请已成功提交！","data":null}
+返回码：
+用户通行证验证
+
+
+
+获取足环照片
+请求地址：【POST/GET】/CHAPI/V1/ SGT_GetImageFoot 
+说明：获取足环照片。
+适用版本：V1
+添加日期：2017-11-29
+必需参数：
+uid：用户ID
+f：足环号码
+成功返回：
+{"status":true,"errorCode":0,"msg":"","data":[{
+"sj":"2017/9/18 11:05:29",			/
+"imgurl":"http://118.123.244.89:818/uploadfiles/GYTRace/451926_6f5b13f731a88fe945de84bb6c33387b.jpg", 		//原图
+"slturl":"http://118.123.244.89:818/uploadfiles/GYTRace/thumb/i_451926_6f5b13f731a88fe945de84bb6c33387b.jpg",	//缩略图
+"tag":"标签名称"
+}]}
+
+返回码：
+用户通行证验证
+
+上传足环照片
+请求地址：【POST/GET】/CHAPI/V1/SGT_UploadFootImage 
+说明：上传足环照片。
+适用版本：V1
+添加日期：2017-11-29
+必需参数：
+uid：用户ID
+foot：足环号码
+tagid：标签ID
+lo：东经
+la：北纬
+we：天气
+t：温度
+wd：风向
+file：要上传的文件
+成功返回：
+
+
+返回码：
+用户通行证验证
+
+
+获取赛鸽通标签
+请求地址：【POST/GET】/CHAPI/V1/ SGT_GetTAG 
+说明：获取赛鸽通标签。
+适用版本：V1
+添加日期：2017-11-29
+
+
+成功返回：
+{"status":true,"errorCode":0,"msg":"","data":[{"tid":7,"name":"赛鸽入棚"},{"tid":8,"name":"赛鸽训放"},{"tid":9,"name":"喂食喂水"}]}
+
+
+返回码：
+用户通行证验证
+
+
+获取鸽主入棚记录
+请求地址：【POST/GET】/CHAPI/V1/SGT_GetGeZhu
+说明：获取鸽主入棚记录。
+适用版本：V1
+添加日期：2017-11-29
+必需参数：
+uid：用户ID
+p：页码
+
+
+请求地址：/CHAPI/V1/SGT_GetFootSS
+参数：
+uid 会员ID
+p 分页
+s 搜索足环号码（支持模糊搜索）
+返回值：{"status":true,"errorCode":0,"msg":"","data":[{"sjhm":"18008073708","xingming":"尹子叶","foot":"2015-22-0950491","id":116415,"cskh":"0228"},{"sjhm":"18008073708","xingming":"尹子叶","foot":"2015-22-0950479","id":116414,"cskh":"0228"},{"sjhm":"18008073708","xingming":"尹子叶","foot":"2015-22-0950476","id":116413,"cskh":"0228"},{"sjhm":"18008073708","xingming":"尹子叶","foot":"2015-22-0950465","id":116412,"cskh":"0228"}]}
+
+
+获取鸽主的鸽子照片
+请求地址：【POST/GET】/CHAPI/V1/ SGT_GetImagesGeZhu 
+说明：获取鸽主的鸽子照片。
+适用版本：V1
+添加日期：2017-11-30
+必需参数：
+uid：用户ID
+c：参赛卡号
+成功返回：
+{"status":true,"errorCode":0,"msg":"","data":[{
+"title":"2017年12月01日",//标题
+"image":"http://118.123.244.89:818/uploadfiles/APP/SGT/thumb/i_11104377_c3c7c3f64789637e513386676ad8ed4a.jpg",//封面图片
+"imglist":[{
+	"sj":"2017/12/19:58:38",//创建时间
+	"imgurl":"http://118.123.244.89:818/uploadfiles/APP/SGT/11104377_c3c7c3f64789637e513386676ad8ed4a.jpg",//原图
+	"slturl":"http://118.123.244.89:818/uploadfiles/APP/SGT/thumb/i_11104377_c3c7c3f64789637e513386676ad8ed4a.jpg",//缩略图
+	"tag":"赛鸽入棚"//标签
+}]//点击进入后图片列表
+}]}
+
+
+足环详情：/CHAPI/V1/SGT_GetFootInfo
+参数：
+uid:会员ID
+id:足环索引ID
+返回值：
+{"status":true,"errorCode":0,"msg":"","data":{
+"ttzb":"",				//团体组别
+"diqu":"成都",				//地区
+"id":116415,				//足环索引ID
+"ring":"FFBDE0032EC33D92",		//电子环
+"sjhm":"18008073708",			//手机号码
+"scsj":"\/Date(1435659683550)\/",	//上传日期
+"sex":"",				//性别：雌雄
+"eye":"",				//眼砂
+"foot":"2015-22-0950491",		//足环号码
+"color":"灰",				//羽色
+"xingming":"尹子叶",			//鸽主姓名
+"cskh":"0228",				//参赛卡号
+"rpsj":"\/Date(1435657082000)\/"	//入棚时间
+}}
+
+
+上传鸽主赛鸽的照片
+请求地址：【POST/GET】/CHAPI/V1/SGT_UploadGeZhuImage 
+说明：上传鸽主赛鸽的照片。
+适用版本：V1
+添加日期：2017-11-29
+必需参数：
+uid：用户ID
+cskh：参赛卡号
+tagid：标签ID
+lo：东经
+la：北纬
+we：天气
+t：温度
+wd：风向
+file：要上传的文件
+
+
+训鸽通开通
+请求地址：【POST/GET】/CHAPI/V1/OpenXGT
+说明：训鸽通申请。
+适用版本：V1
+添加日期：2017-11-23
+必需参数：
+uid：用户ID
+sfzzm：身份证正面图片，data
+sfzbm：身份证背面图片，data
+xingming：身份证信息：姓名 
+xingbie：身份证信息：性别 
+minzu：身份证信息：民族
+zhuzhi：身份证信息：住址
+haoma：身份证信息：身份证号码
+qianfajiguan：身份证信息：签发机关
+youxiaoqi：身份证信息：有效期
+成功返回：
+{"status":true,"errorCode":0,"msg":"申请已成功提交！","data":null}
+
+
+
+训鸽通开通
+/CHAPI/V1/GetXgtOpenServicePackageInfo
+返回值：
+{"status":true,"errorCode":0,"msg":"","data":[{"scores":0,"packageName":"训鸽通用户","unitname":"年","servicetimes":1,"expiretime":"2999-12-31 00:00:00","id":34,"flag":0,"name":"训鸽通开通","originalPrice":0,"opentime":"2017-11-17 00:00:00","brief":"训鸽通用户，仅需380元一年（或5000鸽币兑换）","price":380.00,"detial":""}]}
+
+
+训鸽通续费
+/CHAPI/V1/GetXgtRenewalServicePackageInfo
+返回值：
+{"status":true,"errorCode":0,"msg":"","data":[{"scores":0,"packageName":"训鸽通用户","unitname":"","servicetimes":0,"expiretime":"2999-12-07 00:00:00","id":35,"flag":0,"name":"训鸽通续费","originalPrice":0,"opentime":"2017-12-07 00:00:00","brief":"训鸽通用户，仅需380元一年（或5000鸽币兑换）","price":380.00,"detial":""}]}
+
+获取训鸽通信息
+GetXGTInfo
+参数：uid
+返回值：
+sfzzm 身份证正面
+sfzbm 身份证背面
+xingming 姓名
+qmshenhe 审核标记  0为正常；1为关闭；9为审核中
+
+训鸽通开通
+CreateXGTOrder
+参数：
+sid=35
+uid=会员ID 
+type=open（开通）|renewal（续费）
+
+天下鸽谱
+http://www.cpigeon.com/uploadfiles/ad/txgp/
+
+获取地震信息：/Other/GetDiZhen
+获取太阳磁暴信息：/Other/GetTaiYangCiBao
+获取地震和太阳磁暴信息：/Other/GetDiZhenCiBao 地震信息和磁暴信息中间用*分隔
+
+
+创建训鸽通订单
+CreateXGTOrder
+参数：
+sid=35
+uid=会员ID 
+type=open（开通）|renewal（续费）
+
+OrderPayByScore  积分支付
+
+
+http://192.168.0.5/apidoc/

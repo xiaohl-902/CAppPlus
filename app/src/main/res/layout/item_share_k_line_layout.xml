@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/share_k_line"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/team_name"
+            android:paddingTop="@dimen/large_horizontal_margin_15"
+            android:paddingBottom="@dimen/large_horizontal_margin_15"
+            android:textSize="@dimen/medium_text_size"
+            tools:text = "312314123"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/share_line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/foot_id"
+                app:line_text_title="足环号码"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.cpigeon.app.view.LineTextView
+                app:line_text_title="参赛时间"
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/entity_name"
+                app:line_text_title="项目名称"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/rank"
+                app:line_text_title="比赛名次"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/displacement"
+                app:line_text_title="比赛空距"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.cpigeon.app.view.LineTextView
+                android:id="@+id/pigeon_number"
+                app:line_text_title="参赛羽数"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

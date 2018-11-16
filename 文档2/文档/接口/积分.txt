@@ -1,0 +1,24 @@
+江波  9:02:19
+OrderPayScoreByXGT
+江波  9:02:56
+参数和OrderPayByScore一致
+
+
+
+分享图片视频获取鸽币
+请求地址：【POST】/CHAPI/V1/AddScoreByShare
+说明：分享图片视频获取鸽币。
+适用版本：V1
+添加日期：2017-12-19
+必需参数：
+uid：用户ID
+t：类型：tp=图片；sp=视频
+
+
+返回码：
+用户通行证验证
+
+10006：分享图片失败
+
+
+

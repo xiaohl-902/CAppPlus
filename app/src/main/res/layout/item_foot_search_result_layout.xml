@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginTop="20dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:layout_margin="@dimen/small_vertical_margin"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text1"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                android:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/text1_content"
+                android:textColor="@color/color_262626"
+                android:layout_toRightOf="@id/text1"
+                android:layout_marginLeft="48dp"
+                android:textSize="14dp"
+                tools:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_l"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                android:text="鸽主姓名"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/name"
+                android:textColor="@color/color_262626"
+                android:layout_toRightOf="@id/text_l"
+                android:layout_marginLeft="48dp"
+                android:textSize="14dp"
+                tools:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text2"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                android:text="赛事项目"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/text2_content"
+                android:textColor="@color/color_262626"
+                android:layout_toRightOf="@id/text2"
+                android:layout_marginLeft="48dp"
+                android:textSize="14dp"
+                tools:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="赛事组织"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/text3_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48dp"
+                android:layout_toRightOf="@id/text3"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                tools:text="足环号码" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text4"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                android:text="比赛空距"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/text4_content"
+                android:textColor="@color/color_262626"
+                android:layout_toRightOf="@id/text4"
+                android:layout_marginLeft="48dp"
+                android:textSize="14dp"
+                tools:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text5"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                android:text="参赛时间"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/text5_content"
+                android:textColor="@color/color_262626"
+                android:layout_toRightOf="@id/text5"
+                android:layout_marginLeft="48dp"
+                android:textSize="14dp"
+                tools:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text6"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                android:text="参赛羽数"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/text6_content"
+                android:textColor="@color/color_262626"
+                android:layout_toRightOf="@id/text6"
+                android:layout_marginLeft="48dp"
+                android:textSize="14dp"
+                tools:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text7"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                android:text="获得名次"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/text7_content"
+                android:textColor="@color/color_262626"
+                android:layout_toRightOf="@id/text7"
+                android:layout_marginLeft="48dp"
+                android:textSize="14dp"
+                tools:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text8"
+                android:textColor="@color/color_262626"
+                android:textSize="14dp"
+                android:text="赛鸽分速"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/text8_content"
+                android:textColor="@color/color_262626"
+                android:layout_toRightOf="@id/text8"
+                android:layout_marginLeft="48dp"
+                android:textSize="14dp"
+                tools:text="足环号码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_alignParentRight="true"
+        tools:text="1"
+        android:gravity="center"
+        android:background="@drawable/shape_ovel_solid_gray"
+        android:textSize="@dimen/medium_text_size"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
+

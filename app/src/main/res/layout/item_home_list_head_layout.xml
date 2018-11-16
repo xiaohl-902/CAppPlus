@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        tools:src="@drawable/ic_home_dynamic"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:textSize="16dp"
+        android:layout_toRightOf="@id/icon"
+        tools:text="新闻资讯"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/title"
+        android:layout_alignBottom="@+id/title"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/title"
+        android:textSize="12dp"
+        tools:text="新闻资讯" />
+
+    <TextView
+        android:textSize="14dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:text="全部"
+        android:drawableRight="@mipmap/ic_home_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="5dp"
+        android:id="@+id/textView" />
+
+</RelativeLayout>

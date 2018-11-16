@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_above="@+id/rlFollow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:background="#00000000"
+            android:layout_width="match_parent"
+            app:elevation="0dp"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:contentScrim="?attr/colorPrimary"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <include layout="@layout/item_pigeon_circle_head_layout" />
+
+                <android.support.v7.widget.Toolbar
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:id="@+id/toolbar"
+                    android:fitsSystemWindows="true"
+                    android:clipToPadding="true"
+                    app:layout_collapseMode="pin"
+                    app:titleTextColor="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        tools:text="中鸽网"
+                        android:textSize="18dp"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/item_tab_layout" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlFollow"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <View
+            android:background="@color/color_circle_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:scaleType="center"
+            android:src="@mipmap/ic_circle_his_message_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

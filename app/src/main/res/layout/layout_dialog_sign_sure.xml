@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#00000000">
+
+    <!--android:background="@mipmap/bg_transparent"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#00000000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_anim_sign_success"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/anim_sign_success" />
+
+        <TextView
+            android:id="@+id/tv_hint1"
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:gravity="center"
+            android:text="恭喜你获得"
+            android:textColor="#ffd200"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_marginTop="14dp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_get_gb"
+                android:textColor="#ffd200"
+                android:textSize="18sp"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="鸽币"
+                android:textColor="#ffd200"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/btn_sign_success_sure"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="39dp"
+            android:clickable="true"
+            android:src="@drawable/sign_success_sure" />
+
+    </LinearLayout>
+
+</RelativeLayout>

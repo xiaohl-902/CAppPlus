@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <RelativeLayout
+        android:paddingTop="@dimen/large_horizontal_margin_15"
+        android:paddingBottom="@dimen/large_horizontal_margin_15"
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/head_img"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:roundedCornerRadius="2.5dp"
+            fresco:placeholderImage="@mipmap/head_image_default_2" />
+
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="33dp"
+            android:layout_toRightOf="@id/head_img"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            tools:text="12312313123" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/gray_m"
+            android:textSize="@dimen/small_text_size"
+            android:gravity="center_vertical"
+            tools:text="12312313123" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_circle_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+</RelativeLayout>
